@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>White Villa Bali — для агентов · комиссия 5%</title>
+<meta name="description" content="Продайте White Villa Bali и получите 5% комиссии. Вилла под ключ в Унгасане, Бали — $850 000 (IDR 15,5 млрд). Напрямую от собственника." />
+<link rel="canonical" href="https://whitevillabali.com/agents/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="White Villa Bali" />
+<meta property="og:title" content="White Villa Bali — для агентов · комиссия 5%" />
+<meta property="og:description" content="Продайте White Villa Bali и получите 5% ($42 500). Вилла под ключ в Унгасане, Бали. Без эксклюзива, выплата собственником через нотариуса." />
+<meta property="og:image" content="https://whitevillabali.com/assets/img/og-image.jpg" />
+<meta property="og:url" content="https://whitevillabali.com/agents/" />
+<meta name="theme-color" content="#26231E" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png?v=20260622" />
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=20260622" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/style.css?v=20260624d" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/css/intlTelInput.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/js/intlTelInput.min.js"></script>
+<style>
+  /* ===== Agents page — built on the site's Bali Stone tokens ===== */
+  .ag-top{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+    padding:16px var(--pad);background:rgba(231,224,210,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .ag-brand{font-family:"Cormorant",serif;font-size:20px;letter-spacing:.12em;color:var(--ink);text-decoration:none}
+  .ag-brand b{color:var(--accent);font-weight:500}
+  .ag-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+  .ag-top .btn{padding:10px 18px;min-height:0}
+
+  /* hero */
+  .ag-hero{position:relative;min-height:clamp(560px,84vh,820px);display:flex;align-items:flex-end;overflow:hidden}
+  .ag-hero__img{position:absolute;inset:0}
+  .ag-hero__img img{width:100%;height:100%;object-fit:cover}
+  .ag-hero__veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,15,11,.40) 0%,rgba(18,15,11,.26) 32%,rgba(18,15,11,.60) 70%,rgba(18,15,11,.82) 100%)}
+  .ag-hero__in{position:relative;max-width:var(--maxw);width:100%;margin:0 auto;padding:0 var(--pad) clamp(40px,6vw,72px)}
+  .ag-hero h1{font-family:"Cormorant",serif;font-weight:400;color:var(--hero-ink);line-height:1.02;
+    font-size:clamp(38px,6.4vw,86px);margin:.18em 0 .34em;letter-spacing:-.01em;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+  .ag-hero h1 em{font-style:normal;color:var(--accent);font-weight:500}
+  .ag-hero__sub{color:rgba(244,239,228,.92);max-width:42ch;font-size:clamp(15px,1.5vw,18px);line-height:1.6;
+    text-shadow:0 1px 18px rgba(0,0,0,.4)}
+  .ag-hero__sub b{color:var(--hero-ink);font-weight:500}
+  .ag-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:clamp(26px,3vw,38px)}
+
+  /* section heads */
+  .ag-head{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+  .ag-h2{font-family:"Cormorant",serif;font-weight:400;font-size:clamp(28px,3.8vw,48px);color:var(--ink);
+    line-height:1.08;margin:.3em 0 0}
+  .ag-lead{color:var(--ink-soft);max-width:60ch;font-size:clamp(15px,1.4vw,17px);line-height:1.6;margin-top:14px}
+
+  /* commission feature */
+  .ag-comm{background:var(--primary);color:var(--hero-ink)}
+  .ag-comm .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(26px,5vw,72px);align-items:center}
+  .ag-comm__num{font-family:"Cormorant",serif;font-weight:500;color:#E8B873;
+    font-size:clamp(110px,17vw,230px);line-height:.86;letter-spacing:-.02em;
+    text-shadow:0 1px 2px rgba(0,0,0,.55),0 2px 14px rgba(0,0,0,.45),0 0 22px rgba(214,160,94,.3)}
+  .ag-comm__k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,228,.6)}
+  .ag-comm__big{font-family:"Cormorant",serif;font-size:clamp(30px,4.4vw,56px);margin:.12em 0 .1em;color:var(--hero-ink)}
+  .ag-comm__sub{color:rgba(244,239,228,.74);max-width:46ch;line-height:1.6;font-size:clamp(14px,1.4vw,17px)}
+  .ag-comm__sub b{color:var(--accent)}
+
+  /* spec — editorial stat row (no boxes, only hairlines) */
+  .ag-spec{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(26px,3vw,46px) clamp(22px,2.6vw,44px);
+    margin-top:clamp(40px,5vw,64px);background:none;border:0}
+  .ag-spec div{background:none;padding:0 0 16px;border-bottom:1px solid var(--line)}
+  .ag-spec dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .ag-spec dd{font-family:"Cormorant",serif;font-weight:300;font-size:clamp(34px,4vw,54px);color:var(--ink);margin:10px 0 0;line-height:1}
+  .ag-spec dd small{font-size:15px;color:var(--ink-soft)}
+  .ag-price{margin-top:clamp(26px,3vw,40px);font-size:clamp(15px,1.5vw,18px);color:var(--ink-soft);line-height:1.65}
+  .ag-price b{color:var(--ink);font-weight:500}
+  .ag-grid--3{grid-template-columns:repeat(3,1fr)}
+  .ag-comm__num,.ag-comm__big,.ag-spec dd,.ag-price,.ag-loc__near,.ag-step .s,.ag-card .n{font-variant-numeric:tabular-nums}
+
+  /* gallery / video / location */
+  .ag-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:clamp(28px,4vw,44px)}
+  .ag-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}
+  .ag-video{position:relative;display:block;margin-top:clamp(28px,4vw,44px);border-radius:6px;overflow:hidden;aspect-ratio:16/9}
+  .ag-video img{width:100%;height:100%;object-fit:cover;display:block}
+  .ag-video__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,15,11,.18);transition:background .3s}
+  .ag-video:hover .ag-video__play{background:rgba(18,15,11,.32)}
+  .ag-video__play>span{width:84px;height:84px;border-radius:50%;background:rgba(244,239,228,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+  .ag-video__play>span::after{content:"";border-left:24px solid var(--ink);border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:7px}
+  .ag-loc{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(20px,3vw,40px);margin-top:clamp(28px,4vw,44px);align-items:stretch}
+  .ag-loc__map{border-radius:6px;overflow:hidden;min-height:280px}
+  .ag-loc__map img{width:100%;height:100%;object-fit:cover;display:block}
+  .ag-loc__info{display:flex;flex-direction:column;gap:14px}
+  .ag-loc__near{list-style:none;padding:0;margin:0;columns:2;font-size:14px;color:var(--ink-soft)}
+  .ag-loc__near li{padding:5px 0}
+  .ag-loc__near b{color:var(--accent);font-weight:600}
+  .ag-drive{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;align-items:center}
+  .ag-drive .hint{font-size:13px;color:var(--ink-soft)}
+
+  /* why / kit cards — borderless editorial (hairline top-rule + air) */
+  .ag-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(30px,4vw,56px) clamp(28px,3.5vw,52px);margin-top:clamp(40px,5vw,64px)}
+  .ag-card{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:clamp(20px,2.2vw,26px) 0 0}
+  .ag-card h3{font-family:"Cormorant",serif;font-weight:400;font-size:clamp(22px,2.4vw,30px);color:var(--ink);margin:0 0 10px;line-height:1.12;transition:color .25s ease-out}
+  .ag-card p{color:var(--ink-soft);line-height:1.65;font-size:15px;margin:0;max-width:48ch}
+  .ag-card .n{font-family:"Cormorant",serif;font-weight:300;color:var(--accent);font-size:34px;line-height:1;display:block;margin-bottom:10px}
+  .ag-card .who{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+
+  /* steps — numbered editorial row (no gridline box) */
+  .ag-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(22px,2.6vw,40px);background:none;border:0;
+    margin-top:clamp(40px,5vw,64px)}
+  .ag-step{background:none;padding:clamp(18px,2vw,22px) 0 0;border-top:1px solid var(--line)}
+  .ag-step .s{font-family:"Cormorant",serif;font-weight:300;color:var(--accent);font-size:clamp(30px,3.4vw,40px);line-height:1}
+  .ag-step h4{font-size:15px;margin:14px 0 6px;color:var(--ink);font-weight:500;letter-spacing:.01em}
+  .ag-step p{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0}
+
+  /* documents — light, no heavy boxes */
+  .ag-docs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,60px);margin-top:clamp(40px,5vw,64px)}
+  .ag-doc{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:clamp(20px,2.4vw,28px) 0 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .ag-doc h3{font-family:"Cormorant",serif;font-weight:400;font-size:clamp(22px,2.4vw,30px);color:var(--ink);margin:0}
+  .ag-doc p{color:var(--ink-soft);line-height:1.65;font-size:15px;margin:0;flex:1}
+  .ag-doc .pill{align-self:flex-start;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+  .ag-doc .btn[disabled]{opacity:.45;pointer-events:none}
+
+  /* contact */
+  .ag-contact .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,72px);align-items:start}
+  .ag-direct{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+  .ag-form{background:var(--paper);border:0;border-radius:10px;padding:clamp(26px,3vw,40px);
+    display:flex;flex-direction:column;gap:18px}
+  .ag-note{font-size:13px;color:var(--ink-soft)}
+
+  /* footer */
+  .ag-ft{background:var(--primary);color:rgba(244,239,228,.74);padding:clamp(40px,5vw,64px) 0}
+  .ag-ft .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .ag-ft a{color:var(--hero-ink);text-decoration:none;border-bottom:1px solid transparent}
+  .ag-ft a:hover{border-color:var(--accent)}
+
+  /* thank-you popup */
+  .ag-pop{position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;
+    background:rgba(20,17,13,.55);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:.4s}
+  .ag-pop.is-open{opacity:1;visibility:visible}
+  .ag-pop__card{background:var(--paper);border:1px solid var(--line);border-radius:8px;max-width:430px;width:calc(100% - 40px);
+    padding:clamp(34px,5vw,48px) clamp(26px,4vw,40px);text-align:center;box-shadow:0 34px 90px rgba(38,35,30,.4)}
+  .ag-pop__ic{width:60px;height:60px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;
+    justify-content:center;margin:0 auto 18px;font-size:26px}
+  .ag-pop h3{font-family:"Cormorant",serif;font-weight:500;font-size:28px;color:var(--ink);margin:0 0 8px}
+  .ag-pop p{color:var(--ink-soft);line-height:1.55;margin:0 0 22px}
+
+  /* client-description modal */
+  .ag-modal{position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;
+    background:rgba(20,17,13,.6);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:.35s;padding:20px}
+  .ag-modal.is-open{opacity:1;visibility:visible}
+  .ag-modal__card{background:var(--paper);border:1px solid var(--line);border-radius:10px;max-width:680px;width:100%;
+    max-height:88vh;overflow:auto;padding:clamp(26px,3.4vw,40px);position:relative;box-shadow:0 34px 90px rgba(38,35,30,.42)}
+  .ag-modal__x{position:absolute;top:12px;right:16px;background:none;border:0;font-size:30px;line-height:1;color:var(--ink-soft);cursor:pointer}
+  .ag-modal__card h3{font-family:"Cormorant",serif;font-weight:500;font-size:clamp(24px,3vw,32px);color:var(--ink);margin:0 0 6px}
+  .ag-modal__hint{color:var(--ink-soft);font-size:14px;line-height:1.55;margin:0 0 20px}
+  .ag-desc{border:1px solid var(--line);border-radius:6px;margin-bottom:16px;overflow:hidden}
+  .ag-desc__h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;background:rgba(140,122,94,.08);border-bottom:1px solid var(--line)}
+  .ag-desc__h span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .ag-desc__h .btn{padding:7px 14px;min-height:0;font-size:12px}
+  .ag-desc__t{font-family:"Work Sans",sans-serif;font-size:13.5px;line-height:1.62;color:var(--ink);white-space:pre-wrap;
+    margin:0;padding:14px 16px;background:var(--paper)}
+  .ag-card[data-open]{cursor:pointer;transition:transform .25s ease-out}
+  .ag-card[data-open]:hover{transform:translateY(-3px)}
+  .ag-card[data-open]:hover h3{color:var(--accent)}
+  .ag-card .open-cue{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+
+  @media(max-width:860px){
+    .ag-comm .wrap{grid-template-columns:1fr;gap:18px}
+    .ag-spec{grid-template-columns:repeat(2,1fr)}
+    .ag-grid{grid-template-columns:1fr!important}
+    .ag-own::before,.ag-own::after{display:none}  /* vertical dividers make sense only in the 3-col desktop layout */
+    .ag-gallery{grid-template-columns:repeat(2,1fr)}
+    .ag-loc{grid-template-columns:1fr}
+    .ag-loc__near{columns:1}
+    .ag-steps{grid-template-columns:1fr}
+    .ag-docs{grid-template-columns:1fr}
+    .ag-contact .wrap{grid-template-columns:1fr}
+    .ag-cta .btn,.ag-direct .btn{width:100%}
+    .ag-top .ag-tag{display:none}
+  }
+
+  /* ════════ UPGRADE PACK ════════ */
+  /* — section rhythm: −1/3 vs buyer site — */
+  .section{padding:clamp(64px,8vw,112px) 0}
+
+  /* — hero "5%" — readable over the photo — */
+  .ag-hero h1 em{font-style:normal;color:#E8B873;font-weight:600;font-size:1.06em;letter-spacing:.005em;
+    text-shadow:0 1px 2px rgba(0,0,0,.55),0 2px 14px rgba(0,0,0,.45),0 0 22px rgba(214,160,94,.3)}
+
+  /* — typography normalization (no more "dancing" text) — */
+  .section__title{font-family:"Cormorant",Georgia,serif;font-weight:400;font-size:clamp(28px,3.8vw,48px);line-height:1.08;letter-spacing:-.01em;color:var(--ink);max-width:none;margin:.3em 0 0}
+  .section__lead{font-size:clamp(15px,1.4vw,17px);line-height:1.65;color:var(--ink-soft);font-weight:400;max-width:58ch;margin-top:16px}
+  .ag-comm__k,.ag-card .who,.ag-doc .pill,.ag-spec dt{font-size:12px;font-weight:500;letter-spacing:.28em;text-transform:uppercase}
+  .ag-lead{line-height:1.65;max-width:58ch}
+  .ag-comm__sub,.ag-hero__sub{line-height:1.65}
+  .ag-comm__big,.ag-pop h3,.ag-modal__card h3{font-weight:400}
+  .ag-card h3{line-height:1.14}
+  .ag-doc h3{margin:0 0 10px}
+  .ag-comm__num{font-weight:300}
+  .ag-step p{font-size:15px;line-height:1.65}
+  .ag-doc p{max-width:48ch}
+
+  /* — section CTA row (gallery bottom etc.) — */
+  .sec__cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(40px,6vw,64px)}
+
+  /* — location: bigger map + animated villa pin — */
+  .ag-loc{grid-template-columns:1.8fr 1fr}
+  .ag-loc__map{position:relative;min-height:clamp(320px,40vw,480px)}
+  .ag-loc__here{position:absolute;left:43.8%;top:55.7%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 0 0 2px rgba(255,255,255,.55),0 3px 14px rgba(0,0,0,.65);z-index:3}
+  .ag-loc__here::before,.ag-loc__here::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 10px rgba(0,0,0,.45);animation:aghereping 2.6s var(--ease,ease-out) infinite}
+  .ag-loc__here::after{animation-delay:1.3s}
+  @keyframes aghereping{0%{transform:scale(1);opacity:.9}70%,100%{transform:scale(5);opacity:0}}
+
+  /* — steps: animated connecting line — */
+  .ag-steps{position:relative}
+  .ag-steps::before,.ag-steps::after{content:"";position:absolute;pointer-events:none;left:0;right:0;top:calc(clamp(18px,2vw,22px) + .5em);height:1px}
+  .ag-steps::before{background:var(--line)}
+  .ag-steps::after{background:var(--accent);transform-origin:left center;transform:scaleX(0);transition:transform 760ms cubic-bezier(.22,.61,.36,1)}
+  .ag-steps.is-drawn::after{transform:scaleX(1)}
+  /* steps stay fully visible; only the connecting bronze line animates (no hidden content) */
+
+  /* — phone intl-tel-input fit — */
+  .field .iti{width:100%}
+  .field .iti__tel-input{width:100%}
+  .iti__dropdown-content{font-family:inherit}
+
+  /* — floor plans (magazine flip-book), ported from buyer site — */
+  .pln__grid{display:grid;grid-template-columns:300px 1fr;gap:clamp(30px,5vw,72px);margin-top:clamp(36px,4vw,56px);align-items:start}
+  .pln__levels{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .pln__level{display:flex;align-items:baseline;gap:16px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:22px 4px;cursor:pointer;color:var(--ink-soft);transition:color .35s var(--ease,ease-out),padding .35s var(--ease,ease-out)}
+  .pln__level:hover{color:var(--ink);padding-left:10px}
+  .pln__num{font-family:"Cormorant",serif;font-size:46px;font-weight:300;line-height:.9;color:var(--accent);opacity:.45;transition:opacity .35s}
+  .pln__name{font-size:13px;letter-spacing:.05em;line-height:1.4;max-width:15ch}
+  .pln__level.is-active{color:var(--ink);padding-left:14px;border-left:2px solid var(--accent);margin-left:-2px}
+  .pln__level.is-active .pln__num{opacity:1}
+  .pln__stage{position:relative}
+  .pln__mag{position:relative;width:100%;aspect-ratio:1.2;perspective:2600px}
+  .pln__page{position:absolute;inset:0;transform-origin:left center;backface-visibility:hidden;border-radius:5px;overflow:hidden;background:var(--paper);box-shadow:0 34px 80px rgba(38,35,30,.18),0 4px 14px rgba(38,35,30,.07);transition:transform .9s cubic-bezier(.3,.74,.24,1),box-shadow .9s}
+  .pln__page.flipped{transform:rotateY(-176deg);box-shadow:0 34px 80px rgba(38,35,30,.05)}
+  .pln__tag,.pln__cap,.pln__zoomhint,.pln__planimg{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+  .pln__cap,.pln__tag,.pln__zoomhint{opacity:0;transition:opacity .35s ease}
+  .pln__page.is-current .pln__cap,.pln__page.is-current .pln__tag,.pln__page.is-current .pln__zoomhint{opacity:1}
+  .pln__page::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(38,35,30,.14) 0%,rgba(38,35,30,0) 14%)}
+  .pln__page.is-plan{display:flex;align-items:center;justify-content:center;padding:clamp(14px,1.8vw,26px)}
+  .pln__planimg{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-in}
+  .pln__tag{position:absolute;top:14px;right:16px;z-index:2;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);opacity:.7}
+  .pln__cap{position:absolute;left:18px;bottom:14px;z-index:2;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+  .pln__zoomhint{position:absolute;right:16px;bottom:14px;z-index:2;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);opacity:.75;pointer-events:none}
+  .pln__bar{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:22px}
+  .pln__leadcap{font-size:13.5px;line-height:1.7;color:var(--ink-soft);max-width:46ch}
+  .pln__leadcap b{color:var(--ink);font-weight:500}
+  .pln__pager{display:flex;align-items:center;gap:14px;flex:none}
+  .pln__pager button{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--line);border-radius:2px;padding:11px 16px;font:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:.3s}
+  .pln__pager button:hover{background:var(--accent);border-color:var(--accent);color:var(--hero-ink)}
+  .pln__pager button[disabled]{opacity:.3;pointer-events:none}
+  .pln__count{font-family:"Cormorant",serif;font-size:20px;color:var(--ink-soft);min-width:58px;text-align:center}
+  .pln__count b{color:var(--ink)}
+  .pln__pager .pln__next{background:var(--accent);border-color:var(--accent);color:var(--hero-ink);font-weight:600;letter-spacing:.1em;animation:plnPulse 2.6s ease-out infinite}
+  .pln__pager .pln__next:hover{background:var(--primary);border-color:var(--primary);color:var(--hero-ink);animation:none}
+  .pln__pager .pln__next .pln__arw{display:inline-block;font-size:16px;line-height:0;animation:plnNudge 1.5s ease-in-out infinite}
+  .pln__pager .pln__next[disabled],.pln__pager .pln__next[disabled] .pln__arw{animation:none}
+  @keyframes plnNudge{0%,55%,100%{transform:translateX(0)}28%{transform:translateX(6px)}}
+  @keyframes plnPulse{0%{box-shadow:0 0 0 0 rgba(140,122,94,.55)}70%{box-shadow:0 0 0 13px rgba(140,122,94,0)}100%{box-shadow:0 0 0 0 rgba(140,122,94,0)}}
+  .pln__zoom{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;background:rgba(18,15,11,.92);padding:clamp(16px,4vw,48px);cursor:zoom-out}
+  .pln__zoom.is-open{display:flex}
+  .pln__zoom img{max-width:100%;max-height:100%;object-fit:contain;background:var(--paper);border-radius:4px;box-shadow:0 30px 90px rgba(0,0,0,.4)}
+  .pln__zoom-x{position:absolute;top:18px;right:24px;background:none;border:0;color:var(--hero-ink);font-size:34px;line-height:1;cursor:pointer;opacity:.8;transition:opacity .3s}
+  .pln__zoom-x:hover{opacity:1}
+
+  @media (prefers-reduced-motion:reduce){
+    .pln__page{transition:none!important}
+    .pln__pager .pln__next,.pln__pager .pln__next .pln__arw{animation:none}
+    .ag-steps::after{transition:none;transform:scaleX(1)}
+    .ag-step{opacity:1;transform:none;transition:none}
+  }
+
+  @media(max-width:860px){
+    .section{padding:clamp(40px,7.5vw,64px) 0}
+    .ag-loc{grid-template-columns:1fr}
+    .ag-loc__map{min-height:clamp(260px,56vw,360px)}
+    .ag-steps::before,.ag-steps::after{left:calc(clamp(30px,3.4vw,40px) / 2);right:auto;top:0;bottom:0;width:1px;height:auto}
+    .ag-steps::after{transform-origin:top center;transform:scaleY(0)}
+    .ag-steps.is-drawn::after{transform:scaleY(1)}
+    .ag-step{padding-left:clamp(30px,3.4vw,40px)}
+    .ag-step .s{margin-left:calc(-1 * clamp(30px,3.4vw,40px))}
+    .pln__grid{grid-template-columns:1fr;gap:24px}
+    .pln__level{padding:16px 2px}
+    .pln__num{font-size:32px}
+    .pln__mag{aspect-ratio:auto;perspective:none;min-height:0}
+    .pln__page.is-plan{position:relative;display:none;inset:auto;transform:none!important;opacity:1;padding:12px;border-radius:4px;box-shadow:0 16px 44px rgba(38,35,30,.14)}
+    .pln__page.is-plan.is-current{display:block}
+    .pln__page::after{display:none}
+    .pln__planimg{width:100%;height:auto;max-width:100%;max-height:none}
+    .pln__bar{flex-direction:column;align-items:stretch;gap:16px}
+    .pln__pager{width:100%;justify-content:space-between}
+  }
+
+  /* ════════ BLOCK DIVERSITY (3 разных приёма подряд) ════════ */
+  /* ① Выгода — крупные бронзовые цифры (count-up) */
+  .ag-bens .ag-card--stat{border-top-color:var(--accent)}
+  .ag-bignum{display:block;font-family:"Cormorant",serif;font-weight:300;color:var(--accent);font-size:clamp(48px,6.2vw,88px);line-height:.9;letter-spacing:-.015em;margin-bottom:8px;font-variant-numeric:tabular-nums}
+  .ag-bignum b{font-weight:300;font-style:normal}
+  .ag-bignum em{font-style:normal;font-size:.32em;color:var(--ink-soft);font-family:"Work Sans",sans-serif;letter-spacing:.04em}
+  .ag-bignum .pfx{font-style:normal;font-size:.30em;color:var(--ink-soft);font-family:"Work Sans",sans-serif;letter-spacing:.04em;vertical-align:baseline}
+  .ag-card--stat h3{font-family:"Work Sans",sans-serif;font-weight:500;font-size:clamp(15px,1.4vw,17px);color:var(--ink);letter-spacing:.01em;line-height:1.3}
+
+  /* ② Оформление — вертикальные линии-разделители рисуются (сравнение) */
+  .ag-own{position:relative}
+  .ag-own::before,.ag-own::after{content:"";position:absolute;top:4px;bottom:4px;width:1px;background:var(--accent);opacity:.5;transform:scaleY(0);transform-origin:top;transition:transform .85s cubic-bezier(.22,.61,.36,1)}
+  .ag-own::before{left:33.33%}
+  .ag-own::after{left:66.66%;transition-delay:.16s}
+  .ag-own.is-drawn::before,.ag-own.is-drawn::after{transform:scaleY(1)}
+  .ag-own .who{transition:letter-spacing .5s ease}
+  .ag-own.is-drawn .who{letter-spacing:.34em}
+
+  /* ③ Материалы — интерактивный индекс (hover) */
+  .ag-mat .ag-card{transition:transform .3s ease-out}
+  .ag-mat .ag-card .n{transition:transform .3s ease-out,color .3s ease-out;transform-origin:left center}
+  .ag-mat .ag-card h3{position:relative;display:inline-block}
+  .ag-mat .ag-card h3::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s ease-out}
+  .ag-mat .ag-card:hover{transform:translateY(-4px)}
+  .ag-mat .ag-card:hover .n{transform:scale(1.12);color:var(--ink)}
+  .ag-mat .ag-card:hover h3::after{transform:scaleX(1)}
+
+  @media (prefers-reduced-motion:reduce){
+    .ag-own::before,.ag-own::after{transition:none;transform:scaleY(1)}
+    .ag-mat .ag-card,.ag-mat .ag-card .n,.ag-mat .ag-card h3::after{transition:none}
+  }
+
+  /* ════════ CONVERSION: FAQ агентов + строка доверия + плавающий WhatsApp ════════ */
+  .ag-faq{max-width:900px;margin:clamp(34px,5vw,56px) auto 0}
+  .ag-faq__item{border-top:1px solid var(--line)}
+  .ag-faq__item:last-child{border-bottom:1px solid var(--line)}
+  .ag-faq__q{display:flex;justify-content:space-between;align-items:center;gap:24px;width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:24px 2px;font-family:"Cormorant",Georgia,serif;font-weight:400;font-size:clamp(19px,2vw,26px);color:var(--ink);line-height:1.2;transition:color .25s ease}
+  .ag-faq__q:hover{color:var(--accent)}
+  .ag-faq__ic{flex:none;width:22px;height:22px;position:relative}
+  .ag-faq__ic::before,.ag-faq__ic::after{content:"";position:absolute;left:50%;top:50%;width:15px;height:1.5px;background:var(--accent);transform:translate(-50%,-50%);transition:transform .3s ease}
+  .ag-faq__ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+  .ag-faq__item.is-open .ag-faq__ic::after{transform:translate(-50%,-50%) rotate(0)}
+  .ag-faq__a{overflow:hidden;max-height:0;transition:max-height .45s ease}
+  .ag-faq__a p{color:var(--ink-soft);line-height:1.7;font-size:15px;margin:0 2px 24px;max-width:66ch}
+
+  /* строка доверия у формы */
+  .ag-trustline{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:13px;color:var(--ink-soft)}
+  .ag-trustline span{display:inline-flex;align-items:center;gap:7px}
+  .ag-trustline span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+
+  /* плавающий WhatsApp (мобайл) */
+  .ag-wa-fab{position:fixed;right:18px;bottom:18px;z-index:70;width:54px;height:54px;border-radius:50%;background:var(--accent);display:none;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(38,35,30,.34);transition:transform .25s ease}
+  .ag-wa-fab:hover{transform:scale(1.07)}
+  .ag-wa-fab svg{width:28px;height:28px;fill:var(--hero-ink)}
+  @media(max-width:860px){ .ag-wa-fab{display:flex} }
+  .ag-pop.is-open ~ .ag-wa-fab,.ag-modal.is-open ~ .ag-wa-fab{opacity:0;visibility:hidden}
+
+  /* ════════ language switcher (RU / EN / ID) ════════ */
+  .ag-top__r{display:flex;align-items:center;gap:clamp(10px,1.4vw,18px)}
+  .ag-lang{display:inline-flex;align-items:center;flex:none}
+  .ag-lang__b{background:none;border:0;cursor:pointer;font:inherit;font-size:12px;font-weight:500;
+    letter-spacing:.14em;color:var(--ink-soft);padding:6px 8px;line-height:1;transition:color .2s ease}
+  .ag-lang__b:hover{color:var(--ink)}
+  .ag-lang__b.is-active{color:var(--accent)}
+  .ag-lang__b+.ag-lang__b{border-left:1px solid var(--line)}
+  @media(max-width:860px){
+    .ag-top__r{gap:8px}
+    .ag-lang__b{padding:6px 6px;font-size:11px;letter-spacing:.1em}
+    .ag-top .btn{padding:9px 14px;font-size:12px}
+  }
+  @media(max-width:400px){ .ag-brand{font-size:17px;letter-spacing:.08em} }
+</style>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110156693', 'ym');
+    ym(110156693, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110156693" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google Analytics 4 (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KT79P3PTY7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KT79P3PTY7');
+</script>
+<!-- /Google Analytics 4 -->
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1394641834884149');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1394641834884149&ev=PageView&noscript=1"/></noscript>
+<!-- /Meta Pixel -->
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="ag-top">
+  <a class="ag-brand" href="/">White <b>Villa</b> Bali</a>
+  <div class="ag-top__r">
+    <div class="ag-lang" role="group" aria-label="Language / Язык / Bahasa">
+      <button type="button" class="ag-lang__b is-active" data-lang="ru">RU</button>
+      <button type="button" class="ag-lang__b" data-lang="en">EN</button>
+      <button type="button" class="ag-lang__b" data-lang="id">ID</button>
+    </div>
+    <span class="ag-tag" data-i18n="hdr.tag">Для агентов</span>
+    <a class="btn btn--accent" href="#contact" data-i18n="cta.contact">Связаться</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="ag-hero">
+  <div class="ag-hero__img"><img src="/assets/img/hero.webp" alt="White Villa Bali" decoding="async" /></div>
+  <div class="ag-hero__veil"></div>
+  <div class="ag-hero__in">
+    <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Для агентов недвижимости · Бали</p>
+    <h1 data-i18n="hero.h1">Вилла для ваших клиентов.<br>Комиссия агенту — <em>5%.</em></h1>
+    <p class="ag-hero__sub" data-i18n="hero.sub">Вилла под ключ в Унгасане, <b>$850 000 (≈ IDR 15,5 млрд)</b>. Работаем с агентами и брокерами по всему миру, без эксклюзива. Комиссия <b>5% — $42 500</b>, фиксированная; выплачивает собственник через нотариуса после сделки.</p>
+    <div class="ag-cta">
+      <a class="btn btn--accent" href="#contact" data-i18n="cta.contact">Связаться</a>
+      <a class="btn btn--ghost" data-wa href="#">WhatsApp</a>
+      <a class="btn btn--ghost" href="https://t.me/WhiteVillaBali" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMISSION -->
+<section class="section ag-comm">
+  <div class="wrap">
+    <div class="ag-comm__num">5%</div>
+    <div>
+      <p class="ag-comm__k" data-i18n="comm.k">Комиссия агенту · фиксированная</p>
+      <p class="ag-comm__big" data-i18n="comm.big">$42 500</p>
+      <p class="ag-comm__sub" data-i18n="comm.sub">5% от цены <b>$850 000</b>. Ориентир — доллар США (курс IDR плавающий, ≈ IDR 775 000 000). Выплачивает собственник через нотариуса после закрытия сделки. Без эксклюзива — работаем с разными агентами и брокерами.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE VILLA (agent brief) -->
+<section class="section">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="obj.eyebrow">Объект</p>
+    <h2 class="ag-h2" data-i18n="obj.h2">Вилла для ваших клиентов</h2>
+    <p class="ag-lead" data-i18n="obj.lead">Предлагаем рассмотреть White Villa Bali для ваших клиентов: вилла под ключ, готова к жизни и аренде. Ключевые цифры собрали в одном месте — чтобы вам было удобно представить объект.</p>
+  </div>
+  <div class="wrap">
+    <dl class="ag-spec">
+      <div><dt data-i18n="spec.beds">Спальни</dt><dd><span class="ag-num" data-count="4">4</span></dd></div>
+      <div><dt data-i18n="spec.baths">Санузлы</dt><dd><span class="ag-num" data-count="5">5</span></dd></div>
+      <div><dt data-i18n="spec.house">Площадь дома</dt><dd><span class="ag-num" data-count="716">716</span><small> m²</small></dd></div>
+      <div><dt data-i18n="spec.land">Участок</dt><dd><span class="ag-num" data-count="570">570</span><small> m²</small></dd></div>
+      <div><dt data-i18n="spec.roof">Крыша</dt><dd><span class="ag-num" data-count="360">360</span>°</dd></div>
+      <div><dt data-i18n="spec.built">Сдана</dt><dd><span class="ag-num" data-count="2018">2018</span></dd></div>
+      <div><dt data-i18n="spec.yield">Доходность</dt><dd data-i18n="spec.yieldval">12–15<small> %/год</small></dd></div>
+      <div><dt data-i18n="spec.cond">Состояние</dt><dd data-i18n="spec.turnkey">Под ключ</dd></div>
+    </dl>
+    <p class="ag-price" data-i18n="obj.price">Унгасан · Букит · Бали &nbsp;—&nbsp; <b>$850 000 · IDR 15,5 млрд</b> &nbsp;·&nbsp; бассейн · домашний кинотеатр · Sonos · гараж на 2 авто · меблирована.</p>
+  </div>
+</section>
+
+<!-- GALLERY (блок «Резиденция вблизи», как на основном сайте) -->
+<section class="gal section section--quiet" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="gal.eyebrow">Галерея</p>
+    <h2 class="section__title" data-i18n="gal.title">Резиденция вблизи</h2>
+    <p class="section__lead" data-i18n="gal.lead">Каждый ракурс — аргумент: архитектура, свет и океан, сняты честно, без&nbsp;рендеров. Полный комплект в высоком разрешении — на Google Drive.</p>
+    <div class="gal__grid">
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DJI_20251126105822_0119_D-HDR.webp" alt="White Villa Bali — вид с воздуха" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01496-HDR-Edit.webp" alt="Архитектура White Villa Bali" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01505-HDR-Edit.webp" alt="Вилла и сад" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01526-HDR.webp" alt="Крыша 360° с панорамой" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01750-HDR.webp" alt="Терраса с видом на океан" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC02104-HDR.webp" alt="Зелёная стена и лестница" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01965-HDR.webp" alt="Вилла и бассейн с высоты" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01935-HDR.webp" alt="Бассейн и вилла" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01675-HDR.webp" alt="Терраса с колоннами и видом" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC01559-HDR-Edit.webp" alt="Кабинет у окна с видом" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC02296-Edit.webp" alt="Бассейн на закате" loading="lazy"></button>
+      <button class="gal__item" aria-label="Открыть фото"><img src="/assets/img/DSC02348.webp" alt="White Villa Bali в сумерках" loading="lazy"></button>
+    </div>
+    <div class="ag-drive" style="margin-top:clamp(28px,4vw,44px)">
+      <a class="btn btn--accent" data-drive="photos" href="#" target="_blank" rel="noopener" data-i18n="gal.drive">Все фото · Google Drive</a>
+      <span class="hint" data-i18n="gal.driveHint">Смотреть или скачать полный комплект в высоком разрешении.</span>
+    </div>
+    <div class="sec__cta">
+      <a class="btn btn--accent" href="#contact" data-i18n="cta.viewing">Запросить частный показ</a>
+      <a class="btn btn--line" data-wa target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="vid.eyebrow">Видео</p>
+    <h2 class="ag-h2" data-i18n="vid.h2">Вилла за одну минуту</h2>
+    <p class="ag-lead" data-i18n="vid.lead">Съёмка с дрона и обход внутри — крыша, бассейн, гостиная, кухня.</p>
+  </div>
+  <div class="wrap">
+    <a class="ag-video" href="https://youtu.be/jvJCx42v9xw" target="_blank" rel="noopener" aria-label="Смотреть видео-тур">
+      <img src="/assets/img/aerial.webp" alt="Видео-тур White Villa Bali">
+      <span class="ag-video__play"><span></span></span>
+    </a>
+    <div class="ag-drive">
+      <a class="btn btn--line" href="https://youtu.be/jvJCx42v9xw" target="_blank" rel="noopener" data-i18n="vid.youtube">Смотреть на YouTube</a>
+      <a class="btn btn--accent" href="#contact" data-i18n="cta.contact">Связаться</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section section--quiet">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="loc.eyebrow">Локация</p>
+    <h2 class="ag-h2" data-i18n="loc.h2">Унгасан — тихая вершина Букита</h2>
+    <p class="ag-lead" data-i18n="loc.lead">Один из самых востребованных районов на юге Бали: скалы, белые пляжи и закаты над океаном. До лучших пляжей — несколько минут, до аэропорта — около 25 минут.</p>
+  </div>
+  <div class="wrap">
+    <div class="ag-loc">
+      <figure class="ag-loc__map"><img src="/assets/img/location-map.webp" alt="Расположение виллы, Унгасан, Бали"><span class="ag-loc__here" aria-hidden="true"></span></figure>
+      <div class="ag-loc__info">
+        <p style="color:var(--ink);font-size:16px;line-height:1.6" data-i18n="loc.addr"><b>Jl. Awar Awar, Унгасан</b><br>Кута Селатан, Бадунг, Бали 80361</p>
+        <ul class="ag-loc__near">
+          <li data-i18n="loc.n1"><b>7</b> мин · ТЦ</li>
+          <li data-i18n="loc.n2"><b>8</b> мин · гольф-клуб</li>
+          <li data-i18n="loc.n3"><b>13</b> мин · Джимбаран</li>
+          <li data-i18n="loc.n4"><b>15</b> мин · пляж Меласти</li>
+          <li data-i18n="loc.n5"><b>16</b> мин · пляж Пандава</li>
+          <li data-i18n="loc.n6"><b>25</b> мин · аэропорт Нгурах-Рай</li>
+        </ul>
+        <div class="ag-drive" style="margin-top:auto">
+          <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=55R3%2BJJH%20Ungasan%2C%20Bali" target="_blank" rel="noopener" data-i18n="loc.route">Проложить маршрут</a>
+          <a class="btn btn--line" href="https://maps.app.goo.gl/P2s3nne9Wi6YwhHD8" target="_blank" rel="noopener" data-i18n="loc.maps">Открыть в Google Maps</a>
+        </div>
+      </div>
+    </div>
+    <p class="ag-note" style="margin-top:14px" data-i18n="loc.note">Время в пути на авто, ориентировочно.</p>
+  </div>
+</section>
+
+<!-- WHY IT SELLS -->
+<section class="section">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="ben.eyebrow">Выгода для покупателя</p>
+    <h2 class="ag-h2" data-i18n="ben.h2">Что получает ваш клиент</h2>
+  </div>
+  <div class="wrap">
+    <div class="ag-grid ag-bens">
+      <div class="ag-card ag-card--stat"><span class="ag-bignum"><i class="pfx" data-i18n="ben.upto">до</i>&nbsp;<b data-count="80">80</b>&nbsp;<em data-i18n="ben.years">лет</em></span><h3 data-i18n="ben.c1h">Владение для иностранца</h3><p data-i18n="ben.c1p">Hak Pakai на физлицо или через компанию PT PMA — оформленное долгосрочное владение виллой и землёй, продлевается по закону.</p></div>
+      <div class="ag-card ag-card--stat"><span class="ag-bignum"><i class="pfx" data-i18n="ben.upto">до</i>&nbsp;<b data-count="15">15</b><em data-i18n="ben.pa">% / год</em></span><h3 data-i18n="ben.c2h">Доходность</h3><p data-i18n="ben.c2p">Под ключ и готова к аренде с первого дня. Доход подтверждён реальными договорами (показываем приватно).</p></div>
+      <div class="ag-card"><h3 data-i18n="ben.c3h">Гражданину Индонезии — полная собственность</h3><p data-i18n="ben.c3p">SHM (фрихолд) — высшая форма владения землёй и домом, без срока.</p></div>
+      <div class="ag-card"><h3 data-i18n="ben.c4h">Рост стоимости актива</h3><p data-i18n="ben.c4p">Букит — самый востребованный юг Бали. Ликвидный объект под ключ: спрос на аренду и перепродажу.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNERSHIP (for the buyer) -->
+<section class="section section--quiet">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="own.eyebrow">Оформление — для вашего покупателя</p>
+    <h2 class="ag-h2" data-i18n="own.h2">Как ваш клиент может оформить виллу</h2>
+    <p class="ag-lead" data-i18n="own.lead">Первый вопрос любого иностранного покупателя. Три легальных формата — по тому, кто покупатель. Точную структуру подтверждает лицензированный нотариус (PPAT) на сделке.</p>
+  </div>
+  <div class="wrap">
+    <div class="ag-grid ag-own" style="grid-template-columns:repeat(3,1fr)">
+      <div class="ag-card">
+        <span class="who" data-i18n="own.who1">Граждане Индонезии</span>
+        <h3>SHM · Hak Milik</h3>
+        <p data-i18n="own.p1">Полная собственность (фрихолд) — без срока. Высшая форма владения землёй и домом.</p>
+      </div>
+      <div class="ag-card">
+        <span class="who" data-i18n="own.who2">Иностранцы · физлицо</span>
+        <h3>Hak Pakai</h3>
+        <p data-i18n="own.p2">Право пользования на имя покупателя, продлевается по закону — суммарно до ~80 лет по действующим нормам.</p>
+      </div>
+      <div class="ag-card">
+        <span class="who" data-i18n="own.who3">Иностранцы · юрлицо</span>
+        <h3>HGB · PT PMA</h3>
+        <p data-i18n="own.p3">Оформление на индонезийскую компанию покупателя (PT PMA) — частый формат для иностранных инвесторов.</p>
+      </div>
+    </div>
+    <p class="ag-note" style="margin-top:18px" data-i18n="own.note">Точный формат, сроки и пакет бумаг фиксирует лицензированный нотариус (PPAT) — напрямую, без посредников. (Налоговых и визовых советов здесь не даём.)</p>
+  </div>
+</section>
+
+<!-- MARKETING KIT -->
+<section class="section">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="kit.eyebrow">Материалы</p>
+    <h2 class="ag-h2" data-i18n="kit.h2">Всё для работы с клиентом</h2>
+    <p class="ag-lead" data-i18n="kit.lead">Фото, видео, планировки и файл с детальными данными по вилле — готовы к показу клиенту. Скачайте и отправляйте.</p>
+  </div>
+  <div class="wrap">
+    <div class="ag-grid ag-mat" style="grid-template-columns:repeat(3,1fr)">
+      <div class="ag-card"><p class="n">01</p><h3 data-i18n="kit.c1h">Фото и дрон</h3><p data-i18n="kit.c1p">Профессиональная HDR-съёмка и аэросъёмка.</p></div>
+      <div class="ag-card"><p class="n">02</p><h3 data-i18n="kit.c2h">Видео-тур на минуту</h3><p data-i18n="kit.c2p">Кинематографичный обход — крыша, интерьеры, бассейн.</p></div>
+      <div class="ag-card"><p class="n">03</p><h3 data-i18n="kit.c3h">Планировки</h3><p data-i18n="kit.c3p">Все четыре уровня, чисто и с подписями.</p></div>
+      <div class="ag-card"><p class="n">04</p><h3 data-i18n="kit.c4h">Детальный спец-лист</h3><p data-i18n="kit.c4p">Площади, титул, коммуникации, налоги и условия — всё в одном PDF. Кнопка «Скачать PDF» — в разделе «Документы» ниже.</p></div>
+      <div class="ag-card" data-open="agDesc" role="button" tabindex="0"><p class="n">05</p><h3 data-i18n="kit.c5h">Готовое описание для клиента</h3><p data-i18n="kit.c5p">Короткий текст о вилле для отправки клиенту в WhatsApp или на e-mail — на RU / EN / ID, без переписывания.</p><span class="open-cue" data-i18n="kit.c5cue">Открыть и скопировать →</span></div>
+      <div class="ag-card"><p class="n">06</p><h3 data-i18n="kit.c6h">Условия партнёрства</h3><p data-i18n="kit.c6p">Чёткие условия 5% письменно — до того как вы приведёте покупателя.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLANS -->
+<section class="pln section section--quiet" id="plans">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="pln.eyebrow">Планировки</p>
+    <h2 class="ag-h2" data-i18n="pln.h2">Четыре уровня&nbsp;— листайте как&nbsp;книгу</h2>
+    <p class="ag-lead" data-i18n="pln.lead">Оригинальные чертежи архитектора, уровень за&nbsp;уровнем&nbsp;— 1:100, без&nbsp;рендеров. Листайте страницы как&nbsp;книгу или выберите этаж слева.</p>
+  </div>
+  <div class="wrap">
+    <div class="pln__grid">
+      <nav class="pln__levels" id="plnLevels" aria-label="Этажи виллы">
+        <button class="pln__level is-active" data-lvl="1"><span class="pln__num">01</span><span class="pln__name" data-i18n="pln.lvl1">Вход · сервис · бассейн</span></button>
+        <button class="pln__level" data-lvl="2"><span class="pln__num">02</span><span class="pln__name" data-i18n="pln.lvl2">Гостиная · кухня · мастер</span></button>
+        <button class="pln__level" data-lvl="3"><span class="pln__num">03</span><span class="pln__name" data-i18n="pln.lvl3">Спальни · сьюты</span></button>
+        <button class="pln__level" data-lvl="4"><span class="pln__num">04</span><span class="pln__name" data-i18n="pln.lvl4">Крыша 360°</span></button>
+      </nav>
+      <div class="pln__stage">
+        <div class="pln__mag" id="plnBook">
+          <div class="pln__page is-plan" data-lvl="1"><span class="pln__tag" data-i18n="pln.tag">оригинал · 1:100</span><img class="pln__planimg" src="/assets/img/plans/plan1.webp" alt="Чертёж: уровень 01, Ground floor" loading="lazy"><span class="pln__cap" data-i18n="pln.cap1">Уровень 01 · Ground floor</span><span class="pln__zoomhint" aria-hidden="true" data-i18n="pln.zoom">увеличить +</span></div>
+          <div class="pln__page is-plan" data-lvl="2"><span class="pln__tag" data-i18n="pln.tag">оригинал · 1:100</span><img class="pln__planimg" src="/assets/img/plans/plan2.webp" alt="Чертёж: уровень 02, First floor" loading="lazy"><span class="pln__cap" data-i18n="pln.cap2">Уровень 02 · First floor</span><span class="pln__zoomhint" aria-hidden="true" data-i18n="pln.zoom">увеличить +</span></div>
+          <div class="pln__page is-plan" data-lvl="3"><span class="pln__tag" data-i18n="pln.tag">оригинал · 1:100</span><img class="pln__planimg" src="/assets/img/plans/plan3.webp" alt="Чертёж: уровень 03, Second floor" loading="lazy"><span class="pln__cap" data-i18n="pln.cap3">Уровень 03 · Second floor</span><span class="pln__zoomhint" aria-hidden="true" data-i18n="pln.zoom">увеличить +</span></div>
+          <div class="pln__page is-plan" data-lvl="4"><span class="pln__tag" data-i18n="pln.tag">оригинал · 1:100</span><img class="pln__planimg" src="/assets/img/plans/plan4.webp" alt="Чертёж: уровень 04, Roof top" loading="lazy"><span class="pln__cap" data-i18n="pln.cap4">Уровень 04 · Roof top</span><span class="pln__zoomhint" aria-hidden="true" data-i18n="pln.zoom">увеличить +</span></div>
+        </div>
+        <div class="pln__bar">
+          <p class="pln__leadcap" id="plnCap"><b>Уровень 01</b>&nbsp;— въезд, гараж на&nbsp;2&nbsp;авто, блок персонала, входная галерея, сад и&nbsp;бассейн.</p>
+          <div class="pln__pager"><button class="pln__prev" id="plnPrev" aria-label="Предыдущий этаж" disabled data-i18n="pln.prev">‹ Назад</button><span class="pln__count"><b id="plnNum">01</b>&nbsp;/&nbsp;04</span><button class="pln__next" id="plnNext" aria-label="Следующий этаж"><span data-i18n="pln.next">Листать</span> <span class="pln__arw" aria-hidden="true">›</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pln__zoom" id="plnZoom" aria-hidden="true" role="dialog" aria-label="План этажа, полный размер">
+    <button class="pln__zoom-x" aria-label="Закрыть">×</button>
+    <img src="" alt="">
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--quiet">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="how.eyebrow">Как это работает</p>
+    <h2 class="ag-h2" data-i18n="how.h2">Порядок работы</h2>
+    <p class="ag-lead" data-i18n="how.lead">Без эксклюзива. Комиссия 5% фиксированная — выплачивает собственник через нотариуса после сделки.</p>
+  </div>
+  <div class="wrap">
+    <div class="ag-steps">
+      <div class="ag-step"><p class="s">1</p><h4 data-i18n="how.s1h">Изучите виллу</h4><p data-i18n="how.s1p">Эта страница + файл с детальными данными.</p></div>
+      <div class="ag-step"><p class="s">2</p><h4 data-i18n="how.s2h">Свяжитесь с нами</h4><p data-i18n="how.s2p">Материалы, ответы, организация показа.</p></div>
+      <div class="ag-step"><p class="s">3</p><h4 data-i18n="how.s3h">Встреча на вилле</h4><p data-i18n="how.s3p">Приводите покупателя — смотрим виллу лично, устно согласуем условия.</p></div>
+      <div class="ag-step"><p class="s">4</p><h4 data-i18n="how.s4h">Нотариус и задаток</h4><p data-i18n="how.s4p">Письменное соглашение → нотариус (PPAT) готовит документы, покупатель вносит задаток 10%.</p></div>
+      <div class="ag-step"><p class="s">5</p><h4 data-i18n="how.s5h">Закрытие → ваши 5%</h4><p data-i18n="how.s5p">Собственник выплачивает комиссию через нотариуса после сделки.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="section">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="doc.eyebrow">Документы</p>
+    <h2 class="ag-h2" data-i18n="doc.h2">Данные и документы по вилле</h2>
+  </div>
+  <div class="wrap">
+    <div class="ag-docs">
+      <div class="ag-doc">
+        <span class="pill" data-i18n="doc.pill1">Скачать</span>
+        <h3 data-i18n="doc.h1">Детальный спец-лист</h3>
+        <p data-i18n="doc.p1">Электричество, объём воды, характеристики оборудования и полное описание — документ, который агент скачивает, чтобы полностью понять виллу.</p>
+        <a class="btn btn--accent" href="/agents/white-villa-bali-info-sheet-id.pdf" target="_blank" rel="noopener" data-pdf data-i18n="doc.btn1">Скачать PDF</a>
+      </div>
+      <div class="ag-doc">
+        <span class="pill" data-i18n="doc.pill2">По запросу</span>
+        <h3 data-i18n="doc.h2b">Оригиналы документов на право</h3>
+        <p data-i18n="doc.p2">Сертификаты и оригиналы предоставляем <b>по запросу и только при личном общении</b> — никогда не выкладываем публично. Проверяем вместе с вашим клиентом и нашим нотариусом (PPAT).</p>
+        <a class="btn btn--accent" data-wa href="#" data-i18n="doc.btn2">Запросить документы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ AGENTS -->
+<section class="section" id="faq-agents">
+  <div class="ag-head">
+    <p class="eyebrow" data-i18n="faq.eyebrow">Вопросы агентов</p>
+    <h2 class="ag-h2" data-i18n="faq.h2">Коротко и по делу</h2>
+  </div>
+  <div class="wrap">
+    <div class="ag-faq">
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q1">Когда и как я получу комиссию?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a1">5% фиксированная — <b>$42 500</b>. Выплачивает собственник через нотариуса (PPAT) после закрытия сделки. Условия фиксируем <b>письменно — до того, как вы приводите клиента</b>.</p></div></div>
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q2">Есть ли эксклюзив?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a2">Нет. Работаем с разными агентами. Комиссию получает тот, чей покупатель довёл сделку до закрытия. Чтобы закрепить клиента за вами — просто представьте его нам письменно до показа.</p></div></div>
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q3">Как проходит сделка?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a3">Заинтересованный покупатель → встреча и показ на вилле → устно согласуем условия → подписываем письменное соглашение → у нотариуса (PPAT) оформляем документы и покупатель вносит задаток 10% → готовим полный пакет → закрытие. Прозрачно и по шагам.</p></div></div>
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q4">Нужна ли мне лицензия в Индонезии?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a4">Нет. Вы приводите покупателя — оформление ведём мы вместе с лицензированным нотариусом (PPAT). Юридическую часть на себя не берёте.</p></div></div>
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q5">Кто готовит документы?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a5">Документы готовит нотариус (PPAT) на сделке, мы даём все данные по объекту. От вас — покупатель и его интерес; остальное берём на себя.</p></div></div>
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q6">Можно показать виллу лично?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a6">Да. Встречаемся на вилле — с вами или с вашим клиентом. Живой показ продаёт лучше всего.</p></div></div>
+      <div class="ag-faq__item"><button class="ag-faq__q"><span data-i18n="faq.q7">Кто может купить — иностранец или только местный?</span><span class="ag-faq__ic" aria-hidden="true"></span></button><div class="ag-faq__a"><p data-i18n="faq.a7">Оба. Гражданин Индонезии — SHM (полная собственность). Иностранец — Hak Pakai на физлицо или через компанию PT PMA (владение до ~80 лет). Точную структуру подтверждает нотариус.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--quiet ag-contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-i18n="ct.eyebrow">Связаться</p>
+      <h2 class="ag-h2" data-i18n="ct.h2">Свяжитесь напрямую</h2>
+      <p class="ag-lead" data-i18n="ct.lead">Оставьте контакты — пришлём материалы и файл по вилле, ответим на вопросы и организуем показ. У нас есть всё необходимое; можем встретиться и показать виллу лично — вам или с вашим клиентом.</p>
+      <div class="ag-direct">
+        <a class="btn btn--line" data-wa href="#">WhatsApp · +62 823-4218-2361</a>
+        <a class="btn btn--line" href="https://t.me/WhiteVillaBali" target="_blank" rel="noopener">Telegram · @WhiteVillaBali</a>
+      </div>
+      <div class="ag-trustline">
+        <span data-i18n="ct.t1">Условия 5% — письменно до показа</span>
+        <span data-i18n="ct.t2">Выплата через нотариуса</span>
+        <span data-i18n="ct.t3">Напрямую от собственника</span>
+        <span data-i18n="ct.t4">Ответим за 1 час</span>
+      </div>
+    </div>
+    <form class="ag-form" id="agForm" novalidate>
+      <label class="field"><span data-i18n="ct.fname">Имя</span><input type="text" name="name" required placeholder="Как к вам обращаться" data-i18n-ph="ct.fnamePh" autocomplete="name"></label>
+      <label class="field"><span data-i18n="ct.femail">E-mail</span><input type="email" name="email" required placeholder="you@agency.com" autocomplete="email"></label>
+      <label class="field"><span data-i18n="ct.fphone">Телефон</span><input type="tel" name="phone" required placeholder="+62 …" autocomplete="tel"></label>
+      <label class="field"><span data-i18n="ct.fmsg">Ваш рынок / сообщение <i>(необязательно)</i></span><textarea name="msg" rows="3" placeholder="Откуда ваши покупатели? Есть вопросы?" data-i18n-ph="ct.fmsgPh"></textarea></label>
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" placeholder="Company">
+      <button type="submit" class="btn btn--accent" data-i18n="ct.submit">Запросить материалы</button>
+      <p class="ag-note" data-i18n="ct.fnote">Ответим в течение часа. Ваши данные не передаём.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="ag-ft">
+  <div class="wrap">
+    <a class="ag-brand" href="/" style="color:var(--hero-ink)">White <b>Villa</b> Bali</a>
+    <div>WhatsApp <a data-wa href="#">+62 823-4218-2361</a> &nbsp;·&nbsp; Telegram <a href="https://t.me/WhiteVillaBali" target="_blank" rel="noopener">@WhiteVillaBali</a></div>
+    <div data-i18n="ft.copy">© 2026 · Унгасан, Бали · $850 000 / IDR 15,5 млрд</div>
+  </div>
+</footer>
+
+<!-- lightbox (галерея) -->
+<div class="lb" id="lightbox" aria-hidden="true" role="dialog" aria-label="Просмотр фотографии">
+  <button class="lb__btn lb__close" aria-label="Закрыть">&times;</button>
+  <button class="lb__btn lb__nav lb__prev" aria-label="Предыдущее фото">&lsaquo;</button>
+  <img class="lb__img" src="" alt="" />
+  <button class="lb__btn lb__nav lb__next" aria-label="Следующее фото">&rsaquo;</button>
+  <div class="lb__count" aria-hidden="true"></div>
+</div>
+
+<!-- client-description modal -->
+<div class="ag-modal" id="agDesc" aria-hidden="true" role="dialog" aria-label="Готовое описание для клиента">
+  <div class="ag-modal__card">
+    <button class="ag-modal__x" aria-label="Закрыть">&times;</button>
+    <h3 data-i18n="desc.title">Готовое описание для клиента</h3>
+    <p class="ag-modal__hint" data-i18n="desc.hint">Скопируйте и отправьте клиенту в WhatsApp или на e-mail. Вместо [ссылка] вставьте ссылку на фото (Google Drive).</p>
+
+    <div class="ag-desc">
+      <div class="ag-desc__h"><span>🇷🇺 Русский</span><button class="btn btn--line ag-copy" data-copy="d-ru" data-i18n="desc.copy">Скопировать</button></div>
+<pre class="ag-desc__t" id="d-ru">White Villa Bali — вилла под ключ в Унгасане (Букит, Бали).
+
+4 спальни, 5 санузлов, 716 м² дом / 570 м² участок. Бассейн, домашний кинотеатр, гараж на 2 авто, панорамная крыша 360° с видом на океан, статую GWK и вулкан Агунг. Сдана в 2018, полностью меблирована — можно заезжать или сдавать с первого дня.
+
+Цена: $850 000 (≈ IDR 15,5 млрд), напрямую от собственника.
+
+Оформление: гражданам Индонезии — SHM (полная собственность); иностранцам — Hak Pakai на физлицо или через компанию PT PMA. Точную структуру подтверждает лицензированный нотариус (PPAT).
+
+Доходность при сдаче — ориентировочно 12–15% годовых.
+
+Фото и видео: [ссылка]
+Вопросы и показ: WhatsApp +62 823-4218-2361</pre>
+    </div>
+
+    <div class="ag-desc">
+      <div class="ag-desc__h"><span>🇬🇧 English</span><button class="btn btn--line ag-copy" data-copy="d-en" data-i18n="desc.copy">Скопировать</button></div>
+<pre class="ag-desc__t" id="d-en">White Villa Bali — turnkey villa in Ungasan (Bukit, Bali).
+
+4 bedrooms, 5 bathrooms, 716 m² house / 570 m² land. Private pool, home cinema, 2-car garage, 360° panoramic rooftop with ocean, GWK statue and Mt Agung views. Built in 2018, fully furnished — move in or rent from day one.
+
+Price: USD 850,000 (≈ IDR 15.5 bn), directly from the owner.
+
+Ownership: Indonesian citizens — SHM (full freehold); foreign buyers — Hak Pakai as an individual or via a PT PMA company. The exact structure is confirmed by a licensed notary (PPAT).
+
+Indicative rental yield 12–15% per year.
+
+Photos & video: [link]
+Questions & viewing: WhatsApp +62 823-4218-2361</pre>
+    </div>
+
+    <div class="ag-desc">
+      <div class="ag-desc__h"><span>🇮🇩 Bahasa Indonesia</span><button class="btn btn--line ag-copy" data-copy="d-id" data-i18n="desc.copy">Скопировать</button></div>
+<pre class="ag-desc__t" id="d-id">White Villa Bali — vila siap huni di Ungasan (Bukit, Bali).
+
+4 kamar tidur, 5 kamar mandi, 716 m² bangunan / 570 m² tanah. Kolam renang pribadi, home cinema, garasi 2 mobil, rooftop panorama 360° menghadap laut, patung GWK, dan Gunung Agung. Dibangun 2018, lengkap berperabot — langsung huni atau disewakan.
+
+Harga: USD 850.000 (≈ IDR 15,5 miliar), langsung dari pemilik.
+
+Kepemilikan: WNI — SHM (hak milik penuh); WNA — Hak Pakai atas nama pribadi atau melalui perusahaan PT PMA. Struktur pastinya dikonfirmasi oleh notaris berlisensi (PPAT).
+
+Estimasi imbal hasil sewa 12–15% per tahun.
+
+Foto & video: [tautan]
+Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
+    </div>
+  </div>
+</div>
+
+<!-- thank-you popup -->
+<div class="ag-pop" id="agPop" aria-hidden="true">
+  <div class="ag-pop__card">
+    <div class="ag-pop__ic">✓</div>
+    <h3 data-i18n="pop.h">Спасибо за заявку!</h3>
+    <p data-i18n="pop.p">Мы получили вашу заявку и в течение часа пришлём условия партнёрства и материалы.</p>
+    <button class="btn btn--accent" id="agPopClose" data-i18n="pop.close">Закрыть</button>
+  </div>
+</div>
+
+<a class="ag-wa-fab" data-wa href="#" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 5 1.9 7.8 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3C2.9 8.8 8.8 2.9 16 2.9S29.1 8.8 29.1 16 23.2 28.9 16 28.9zm7.2-9.6c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.6.1-.2.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4z"/></svg></a>
+
+<script>
+  (function(){
+    var WA = "6282342182361";
+    var LEAD_ENDPOINT = "https://wvb-relay.vercel.app/api/lead"; // тот же релей, что на основном сайте → Telegram
+    var AG = { lang: "ru" };            // shared language state (read by other modules)
+    var CUR_LANG = "ru";                // kept in sync for the lead payload
+    var LANGS = ["ru", "en", "id"];
+    function track(name, fbStd){
+      try{ if(window.gtag) gtag('event', name); }catch(e){}
+      try{ if(window.ym) ym(110156693,'reachGoal',name); }catch(e){}
+      try{ if(window.fbq){ if(fbStd) fbq('track', fbStd); else fbq('trackCustom', name); } }catch(e){}
+    }
+
+    /* ════════ i18n: RU остаётся в DOM как база; словарь хранит только EN + ID ════════ */
+    var WA_MSG = {
+      ru: "Здравствуйте! Я агент по недвижимости и хочу продавать White Villa Bali за комиссию 5%. Пришлите, пожалуйста, условия партнёрства и материалы.",
+      en: "Hello! I'm a real-estate agent and I'd like to sell White Villa Bali for a 5% commission. Please send me the partnership terms and materials.",
+      id: "Halo! Saya agen properti dan ingin menjual White Villa Bali dengan komisi 5%. Mohon kirimkan ketentuan kemitraan dan materinya."
+    };
+    var MISC = { copied: { ru: "Скопировано ✓", en: "Copied ✓", id: "Tersalin ✓" } };
+    var META = {
+      ru: { title: "White Villa Bali — для агентов · комиссия 5%",
+            desc: "Продайте White Villa Bali и получите 5% комиссии. Вилла под ключ в Унгасане, Бали — $850 000 (IDR 15,5 млрд). Напрямую от собственника." },
+      en: { title: "White Villa Bali — for agents · 5% commission",
+            desc: "Sell White Villa Bali and earn a 5% commission. Turnkey villa in Ungasan, Bali — $850,000 (IDR 15.5 bn). Directly from the owner." },
+      id: { title: "White Villa Bali — untuk agen · komisi 5%",
+            desc: "Jual White Villa Bali dan dapatkan komisi 5%. Vila siap huni di Ungasan, Bali — $850.000 (IDR 15,5 miliar). Langsung dari pemilik." }
+    };
+    var DICT = {
+      en: {
+        "hdr.tag": "For agents", "cta.contact": "Contact", "cta.viewing": "Request a private viewing",
+        "hero.eyebrow": "For real-estate agents · Bali",
+        "hero.h1": "A villa for your clients.<br>Agent commission — <em>5%.</em>",
+        "hero.sub": "A turnkey villa in Ungasan, <b>$850,000 (≈ IDR 15.5 bn)</b>. We work with agents and brokers worldwide, non-exclusive. Commission <b>5% — $42,500</b>, fixed; paid by the owner via a notary after closing.",
+        "comm.k": "Agent commission · fixed", "comm.big": "$42,500",
+        "comm.sub": "5% of the <b>$850,000</b> price. Quoted in US dollars (the IDR rate floats, ≈ IDR 775,000,000). Paid by the owner via a notary after closing. Non-exclusive — we work with several agents and brokers.",
+        "obj.eyebrow": "The property", "obj.h2": "A villa for your clients",
+        "obj.lead": "Consider White Villa Bali for your clients: a turnkey villa, ready to live in and to rent. We've put the key figures in one place so it's easy to present the property.",
+        "spec.beds": "Bedrooms", "spec.baths": "Bathrooms", "spec.house": "House area", "spec.land": "Land",
+        "spec.roof": "Rooftop", "spec.built": "Built", "spec.yield": "Yield", "spec.yieldval": "12–15<small> %/yr</small>",
+        "spec.cond": "Condition", "spec.turnkey": "Turnkey",
+        "obj.price": "Ungasan · Bukit · Bali &nbsp;—&nbsp; <b>$850,000 · IDR 15.5 bn</b> &nbsp;·&nbsp; pool · home cinema · Sonos · 2-car garage · furnished.",
+        "gal.eyebrow": "Gallery", "gal.title": "The residence, up close",
+        "gal.lead": "Every angle is an argument: architecture, light and ocean, shot honestly — no renders. The full high-resolution set is on Google Drive.",
+        "gal.drive": "All photos · Google Drive", "gal.driveHint": "View or download the full high-resolution set.",
+        "vid.eyebrow": "Video", "vid.h2": "The villa in one minute",
+        "vid.lead": "Drone footage and an interior walkthrough — rooftop, pool, living room, kitchen.",
+        "vid.youtube": "Watch on YouTube",
+        "loc.eyebrow": "Location", "loc.h2": "Ungasan — the quiet top of Bukit",
+        "loc.lead": "One of the most sought-after areas in south Bali: cliffs, white beaches and ocean sunsets. The best beaches are minutes away, the airport about 25 minutes.",
+        "loc.addr": "<b>Jl. Awar Awar, Ungasan</b><br>Kuta Selatan, Badung, Bali 80361",
+        "loc.n1": "<b>7</b> min · mall", "loc.n2": "<b>8</b> min · golf club", "loc.n3": "<b>13</b> min · Jimbaran",
+        "loc.n4": "<b>15</b> min · Melasti beach", "loc.n5": "<b>16</b> min · Pandawa beach", "loc.n6": "<b>25</b> min · Ngurah Rai airport",
+        "loc.route": "Get directions", "loc.maps": "Open in Google Maps", "loc.note": "Approximate driving times.",
+        "ben.eyebrow": "Buyer's upside", "ben.h2": "What your client gets",
+        "ben.upto": "up to", "ben.years": "years", "ben.pa": "% / yr",
+        "ben.c1h": "Ownership for foreigners",
+        "ben.c1p": "Hak Pakai as an individual or via a PT PMA company — registered long-term ownership of the villa and land, legally renewable.",
+        "ben.c2h": "Rental yield",
+        "ben.c2p": "Turnkey and ready to rent from day one. Income backed by real contracts (shown privately).",
+        "ben.c3h": "Indonesian citizens — full freehold",
+        "ben.c3p": "SHM (freehold) — the highest form of land and home ownership, with no time limit.",
+        "ben.c4h": "Asset appreciation",
+        "ben.c4p": "Bukit is the most sought-after south of Bali. A liquid turnkey asset: demand for both rental and resale.",
+        "own.eyebrow": "Ownership — for your buyer", "own.h2": "How your client can own the villa",
+        "own.lead": "The first question of any foreign buyer. Three legal structures — depending on who the buyer is. The exact structure is confirmed by a licensed notary (PPAT) at closing.",
+        "own.who1": "Indonesian citizens", "own.p1": "Full freehold ownership — no time limit. The highest form of land and home ownership.",
+        "own.who2": "Foreigners · individual", "own.p2": "A right of use in the buyer's name, legally renewable — up to ~80 years in total under current rules.",
+        "own.who3": "Foreigners · company", "own.p3": "Held via the buyer's Indonesian company (PT PMA) — a common structure for foreign investors.",
+        "own.note": "The exact structure, terms and paperwork are set by a licensed notary (PPAT) — directly, no intermediaries. (We don't give tax or visa advice here.)",
+        "kit.eyebrow": "Materials", "kit.h2": "Everything to work with your client",
+        "kit.lead": "Photos, video, floor plans and a detailed data sheet on the villa — ready to show your client. Download and send.",
+        "kit.c1h": "Photos & drone", "kit.c1p": "Professional HDR and aerial photography.",
+        "kit.c2h": "One-minute video tour", "kit.c2p": "A cinematic walkthrough — rooftop, interiors, pool.",
+        "kit.c3h": "Floor plans", "kit.c3p": "All four levels, clean and labelled.",
+        "kit.c4h": "Detailed spec sheet", "kit.c4p": "Areas, title, utilities, taxes and terms — all in one PDF. The “Download PDF” button is in the Documents section below.",
+        "kit.c5h": "Ready-made client description", "kit.c5p": "A short text about the villa to send your client on WhatsApp or by email — in RU / EN / ID, no rewriting.",
+        "kit.c5cue": "Open & copy →", "kit.c6h": "Partnership terms", "kit.c6p": "Clear 5% terms in writing — before you bring the buyer.",
+        "pln.eyebrow": "Floor plans", "pln.h2": "Four levels&nbsp;— flip like a&nbsp;book",
+        "pln.lead": "The architect's original drawings, level by level&nbsp;— 1:100, no renders. Flip the pages like a&nbsp;book or pick a floor on the left.",
+        "pln.lvl1": "Entry · service · pool", "pln.lvl2": "Living · kitchen · master", "pln.lvl3": "Bedrooms · suites", "pln.lvl4": "Rooftop 360°",
+        "pln.tag": "original · 1:100", "pln.cap1": "Level 01 · Ground floor", "pln.cap2": "Level 02 · First floor",
+        "pln.cap3": "Level 03 · Second floor", "pln.cap4": "Level 04 · Roof top", "pln.zoom": "zoom +",
+        "pln.prev": "‹ Back", "pln.next": "Flip",
+        "how.eyebrow": "How it works", "how.h2": "The process",
+        "how.lead": "Non-exclusive. A fixed 5% commission — paid by the owner via a notary after closing.",
+        "how.s1h": "Study the villa", "how.s1p": "This page + the detailed data sheet.",
+        "how.s2h": "Get in touch", "how.s2p": "Materials, answers, arranging a viewing.",
+        "how.s3h": "Meet at the villa", "how.s3p": "Bring your buyer — we view the villa in person and agree terms verbally.",
+        "how.s4h": "Notary & deposit", "how.s4p": "Written agreement → the notary (PPAT) prepares the documents, the buyer pays a 10% deposit.",
+        "how.s5h": "Closing → your 5%", "how.s5p": "The owner pays your commission via the notary after closing.",
+        "doc.eyebrow": "Documents", "doc.h2": "Villa data & documents",
+        "doc.pill1": "Download", "doc.h1": "Detailed spec sheet",
+        "doc.p1": "Electricity, water capacity, equipment specs and a full description — the document an agent downloads to fully understand the villa.",
+        "doc.btn1": "Download PDF", "doc.pill2": "On request", "doc.h2b": "Original title documents",
+        "doc.p2": "We provide certificates and originals <b>on request and only in person</b> — never posted publicly. Verified together with your client and our notary (PPAT).",
+        "doc.btn2": "Request documents",
+        "faq.eyebrow": "Agent questions", "faq.h2": "Short and to the point",
+        "faq.q1": "When and how do I get paid?",
+        "faq.a1": "A fixed 5% — <b>$42,500</b>. Paid by the owner via a notary (PPAT) after closing. Terms are fixed <b>in writing — before you bring the client</b>.",
+        "faq.q2": "Is there exclusivity?",
+        "faq.a2": "No. We work with several agents. The commission goes to whoever's buyer closes the deal. To secure a client to you — simply introduce them to us in writing before the viewing.",
+        "faq.q3": "How does the deal work?",
+        "faq.a3": "An interested buyer → a meeting and viewing at the villa → verbal terms → sign a written agreement → at the notary (PPAT) the documents are drawn up and the buyer pays a 10% deposit → we prepare the full package → closing. Transparent and step by step.",
+        "faq.q4": "Do I need an Indonesian licence?",
+        "faq.a4": "No. You bring the buyer — we handle the paperwork together with a licensed notary (PPAT). You don't take on the legal side.",
+        "faq.q5": "Who prepares the documents?",
+        "faq.a5": "The notary (PPAT) prepares the documents at closing; we provide all the data on the property. From you — the buyer and their interest; we handle the rest.",
+        "faq.q6": "Can the villa be viewed in person?",
+        "faq.a6": "Yes. We meet at the villa — with you or with your client. An in-person viewing sells best.",
+        "faq.q7": "Who can buy — a foreigner or only a local?",
+        "faq.a7": "Both. An Indonesian citizen — SHM (full freehold). A foreigner — Hak Pakai as an individual or via a PT PMA company (ownership up to ~80 years). The exact structure is confirmed by a notary.",
+        "ct.eyebrow": "Contact", "ct.h2": "Get in touch directly",
+        "ct.lead": "Leave your details — we'll send the materials and the villa data sheet, answer questions and arrange a viewing. We have everything needed; we can meet and show the villa in person — to you or with your client.",
+        "ct.t1": "5% terms — in writing before the viewing", "ct.t2": "Paid via a notary", "ct.t3": "Directly from the owner", "ct.t4": "We reply within 1 hour",
+        "ct.fname": "Name", "ct.fnamePh": "How should we address you", "ct.femail": "Email", "ct.fphone": "Phone",
+        "ct.fmsg": "Your market / message <i>(optional)</i>", "ct.fmsgPh": "Where are your buyers from? Any questions?",
+        "ct.submit": "Request materials", "ct.fnote": "We reply within an hour. We don't share your data.",
+        "ft.copy": "© 2026 · Ungasan, Bali · $850,000 / IDR 15.5 bn",
+        "desc.title": "Ready-made client description",
+        "desc.hint": "Copy and send to your client on WhatsApp or by email. Replace [link] with your photo link (Google Drive).",
+        "desc.copy": "Copy",
+        "pop.h": "Thank you!", "pop.p": "We've received your request and will send the partnership terms and materials within an hour.", "pop.close": "Close"
+      },
+      id: {
+        "hdr.tag": "Untuk agen", "cta.contact": "Hubungi", "cta.viewing": "Minta kunjungan pribadi",
+        "hero.eyebrow": "Untuk agen properti · Bali",
+        "hero.h1": "Vila untuk klien Anda.<br>Komisi agen — <em>5%.</em>",
+        "hero.sub": "Vila siap huni di Ungasan, <b>$850.000 (≈ IDR 15,5 miliar)</b>. Kami bekerja dengan agen dan broker di seluruh dunia, tanpa eksklusivitas. Komisi <b>5% — $42.500</b>, tetap; dibayar pemilik melalui notaris setelah transaksi.",
+        "comm.k": "Komisi agen · tetap", "comm.big": "$42.500",
+        "comm.sub": "5% dari harga <b>$850.000</b>. Patokan dalam dolar AS (kurs IDR mengambang, ≈ IDR 775.000.000). Dibayar pemilik melalui notaris setelah penutupan. Tanpa eksklusivitas — kami bekerja dengan beberapa agen dan broker.",
+        "obj.eyebrow": "Objek", "obj.h2": "Vila untuk klien Anda",
+        "obj.lead": "Pertimbangkan White Villa Bali untuk klien Anda: vila siap huni, siap ditinggali dan disewakan. Kami rangkum angka-angka utama di satu tempat agar mudah dipresentasikan.",
+        "spec.beds": "Kamar tidur", "spec.baths": "Kamar mandi", "spec.house": "Luas bangunan", "spec.land": "Luas tanah",
+        "spec.roof": "Rooftop", "spec.built": "Dibangun", "spec.yield": "Imbal hasil", "spec.yieldval": "12–15<small> %/thn</small>",
+        "spec.cond": "Kondisi", "spec.turnkey": "Siap huni",
+        "obj.price": "Ungasan · Bukit · Bali &nbsp;—&nbsp; <b>$850.000 · IDR 15,5 miliar</b> &nbsp;·&nbsp; kolam renang · home cinema · Sonos · garasi 2 mobil · berperabot.",
+        "gal.eyebrow": "Galeri", "gal.title": "Residensi dari dekat",
+        "gal.lead": "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut, difoto apa adanya — tanpa render. Set lengkap resolusi tinggi ada di Google Drive.",
+        "gal.drive": "Semua foto · Google Drive", "gal.driveHint": "Lihat atau unduh set lengkap resolusi tinggi.",
+        "vid.eyebrow": "Video", "vid.h2": "Vila dalam satu menit",
+        "vid.lead": "Rekaman drone dan tur interior — rooftop, kolam, ruang keluarga, dapur.",
+        "vid.youtube": "Tonton di YouTube",
+        "loc.eyebrow": "Lokasi", "loc.h2": "Ungasan — puncak tenang Bukit",
+        "loc.lead": "Salah satu kawasan paling diminati di Bali selatan: tebing, pantai putih, dan matahari terbenam di laut. Pantai terbaik beberapa menit saja, bandara sekitar 25 menit.",
+        "loc.addr": "<b>Jl. Awar Awar, Ungasan</b><br>Kuta Selatan, Badung, Bali 80361",
+        "loc.n1": "<b>7</b> mnt · mal", "loc.n2": "<b>8</b> mnt · klub golf", "loc.n3": "<b>13</b> mnt · Jimbaran",
+        "loc.n4": "<b>15</b> mnt · Pantai Melasti", "loc.n5": "<b>16</b> mnt · Pantai Pandawa", "loc.n6": "<b>25</b> mnt · Bandara Ngurah Rai",
+        "loc.route": "Rute ke lokasi", "loc.maps": "Buka di Google Maps", "loc.note": "Perkiraan waktu tempuh berkendara.",
+        "ben.eyebrow": "Keuntungan pembeli", "ben.h2": "Yang didapat klien Anda",
+        "ben.upto": "hingga", "ben.years": "tahun", "ben.pa": "% / thn",
+        "ben.c1h": "Kepemilikan untuk WNA",
+        "ben.c1p": "Hak Pakai atas nama pribadi atau melalui perusahaan PT PMA — kepemilikan jangka panjang atas vila dan tanah, dapat diperpanjang secara hukum.",
+        "ben.c2h": "Imbal hasil sewa",
+        "ben.c2p": "Siap huni dan siap disewakan sejak hari pertama. Pendapatan didukung kontrak nyata (ditunjukkan secara privat).",
+        "ben.c3h": "WNI — hak milik penuh",
+        "ben.c3p": "SHM (hak milik) — bentuk kepemilikan tanah dan rumah tertinggi, tanpa batas waktu.",
+        "ben.c4h": "Kenaikan nilai aset",
+        "ben.c4p": "Bukit adalah kawasan paling diminati di selatan Bali. Aset siap huni yang likuid: permintaan untuk sewa maupun jual kembali.",
+        "own.eyebrow": "Kepemilikan — untuk pembeli Anda", "own.h2": "Cara klien Anda memiliki vila",
+        "own.lead": "Pertanyaan pertama setiap pembeli asing. Tiga struktur legal — tergantung siapa pembelinya. Struktur pastinya dikonfirmasi oleh notaris berlisensi (PPAT) saat transaksi.",
+        "own.who1": "WNI", "own.p1": "Kepemilikan penuh (hak milik) — tanpa batas waktu. Bentuk kepemilikan tanah dan rumah tertinggi.",
+        "own.who2": "WNA · pribadi", "own.p2": "Hak pakai atas nama pembeli, dapat diperpanjang secara hukum — total hingga ~80 tahun menurut aturan berlaku.",
+        "own.who3": "WNA · perusahaan", "own.p3": "Dimiliki melalui perusahaan Indonesia milik pembeli (PT PMA) — struktur yang umum bagi investor asing.",
+        "own.note": "Struktur pasti, jangka waktu, dan berkasnya ditetapkan oleh notaris berlisensi (PPAT) — langsung, tanpa perantara. (Kami tidak memberi saran pajak atau visa di sini.)",
+        "kit.eyebrow": "Materi", "kit.h2": "Semua untuk bekerja dengan klien",
+        "kit.lead": "Foto, video, denah, dan lembar data lengkap vila — siap ditunjukkan ke klien. Unduh dan kirim.",
+        "kit.c1h": "Foto & drone", "kit.c1p": "Fotografi HDR profesional dan aerial.",
+        "kit.c2h": "Video tur satu menit", "kit.c2p": "Tur sinematik — rooftop, interior, kolam.",
+        "kit.c3h": "Denah", "kit.c3p": "Keempat lantai, rapi dan berlabel.",
+        "kit.c4h": "Lembar spesifikasi", "kit.c4p": "Luas, legalitas, utilitas, pajak, dan ketentuan — semua dalam satu PDF. Tombol “Unduh PDF” ada di bagian Dokumen di bawah.",
+        "kit.c5h": "Deskripsi siap pakai", "kit.c5p": "Teks singkat tentang vila untuk dikirim ke klien via WhatsApp atau email — dalam RU / EN / ID, tanpa menulis ulang.",
+        "kit.c5cue": "Buka & salin →", "kit.c6h": "Ketentuan kemitraan", "kit.c6p": "Ketentuan 5% yang jelas secara tertulis — sebelum Anda membawa pembeli.",
+        "pln.eyebrow": "Denah", "pln.h2": "Empat lantai&nbsp;— buka seperti&nbsp;buku",
+        "pln.lead": "Gambar asli arsitek, lantai demi lantai&nbsp;— 1:100, tanpa render. Buka halaman seperti&nbsp;buku atau pilih lantai di kiri.",
+        "pln.lvl1": "Masuk · servis · kolam", "pln.lvl2": "Ruang keluarga · dapur · master", "pln.lvl3": "Kamar · suite", "pln.lvl4": "Rooftop 360°",
+        "pln.tag": "asli · 1:100", "pln.cap1": "Lantai 01 · Ground floor", "pln.cap2": "Lantai 02 · First floor",
+        "pln.cap3": "Lantai 03 · Second floor", "pln.cap4": "Lantai 04 · Roof top", "pln.zoom": "perbesar +",
+        "pln.prev": "‹ Kembali", "pln.next": "Buka",
+        "how.eyebrow": "Cara kerjanya", "how.h2": "Alur kerja",
+        "how.lead": "Tanpa eksklusivitas. Komisi tetap 5% — dibayar pemilik melalui notaris setelah transaksi.",
+        "how.s1h": "Pelajari vila", "how.s1p": "Halaman ini + lembar data lengkap.",
+        "how.s2h": "Hubungi kami", "how.s2p": "Materi, jawaban, pengaturan kunjungan.",
+        "how.s3h": "Bertemu di vila", "how.s3p": "Bawa pembeli Anda — kita lihat vila langsung dan sepakati ketentuan secara lisan.",
+        "how.s4h": "Notaris & DP", "how.s4p": "Perjanjian tertulis → notaris (PPAT) menyiapkan dokumen, pembeli membayar DP 10%.",
+        "how.s5h": "Penutupan → 5% Anda", "how.s5p": "Pemilik membayar komisi Anda melalui notaris setelah transaksi.",
+        "doc.eyebrow": "Dokumen", "doc.h2": "Data & dokumen vila",
+        "doc.pill1": "Unduh", "doc.h1": "Lembar spesifikasi",
+        "doc.p1": "Listrik, kapasitas air, spesifikasi peralatan, dan deskripsi lengkap — dokumen yang diunduh agen untuk memahami vila sepenuhnya.",
+        "doc.btn1": "Unduh PDF", "doc.pill2": "Sesuai permintaan", "doc.h2b": "Dokumen legalitas asli",
+        "doc.p2": "Kami menyediakan sertifikat dan dokumen asli <b>atas permintaan dan hanya secara langsung</b> — tidak pernah dipublikasikan. Diperiksa bersama klien Anda dan notaris kami (PPAT).",
+        "doc.btn2": "Minta dokumen",
+        "faq.eyebrow": "Pertanyaan agen", "faq.h2": "Singkat dan jelas",
+        "faq.q1": "Kapan dan bagaimana saya dibayar?",
+        "faq.a1": "Tetap 5% — <b>$42.500</b>. Dibayar pemilik melalui notaris (PPAT) setelah penutupan. Ketentuan ditetapkan <b>tertulis — sebelum Anda membawa klien</b>.",
+        "faq.q2": "Apakah ada eksklusivitas?",
+        "faq.a2": "Tidak. Kami bekerja dengan beberapa agen. Komisi diberikan kepada agen yang pembelinya menutup transaksi. Untuk mengamankan klien atas nama Anda — cukup perkenalkan mereka kepada kami secara tertulis sebelum kunjungan.",
+        "faq.q3": "Bagaimana proses transaksinya?",
+        "faq.a3": "Pembeli tertarik → pertemuan dan kunjungan di vila → ketentuan lisan → tanda tangan perjanjian tertulis → di notaris (PPAT) dokumen disiapkan dan pembeli membayar DP 10% → kami siapkan berkas lengkap → penutupan. Transparan dan bertahap.",
+        "faq.q4": "Apakah saya perlu lisensi di Indonesia?",
+        "faq.a4": "Tidak. Anda membawa pembeli — kami mengurus berkas bersama notaris berlisensi (PPAT). Anda tidak menangani sisi legal.",
+        "faq.q5": "Siapa yang menyiapkan dokumen?",
+        "faq.a5": "Notaris (PPAT) menyiapkan dokumen saat transaksi; kami menyediakan semua data properti. Dari Anda — pembeli dan minatnya; sisanya kami tangani.",
+        "faq.q6": "Bisakah vila dilihat langsung?",
+        "faq.a6": "Ya. Kita bertemu di vila — bersama Anda atau klien Anda. Kunjungan langsung paling efektif menjual.",
+        "faq.q7": "Siapa yang bisa membeli — WNA atau hanya lokal?",
+        "faq.a7": "Keduanya. WNI — SHM (hak milik penuh). WNA — Hak Pakai atas nama pribadi atau melalui perusahaan PT PMA (kepemilikan hingga ~80 tahun). Struktur pastinya dikonfirmasi notaris.",
+        "ct.eyebrow": "Hubungi", "ct.h2": "Hubungi langsung",
+        "ct.lead": "Tinggalkan kontak Anda — kami kirim materi dan lembar data vila, jawab pertanyaan, dan atur kunjungan. Kami punya semua yang diperlukan; kami bisa bertemu dan menunjukkan vila langsung — kepada Anda atau bersama klien Anda.",
+        "ct.t1": "Ketentuan 5% — tertulis sebelum kunjungan", "ct.t2": "Dibayar melalui notaris", "ct.t3": "Langsung dari pemilik", "ct.t4": "Kami balas dalam 1 jam",
+        "ct.fname": "Nama", "ct.fnamePh": "Nama panggilan Anda", "ct.femail": "Email", "ct.fphone": "Telepon",
+        "ct.fmsg": "Pasar / pesan Anda <i>(opsional)</i>", "ct.fmsgPh": "Dari mana pembeli Anda? Ada pertanyaan?",
+        "ct.submit": "Minta materi", "ct.fnote": "Kami balas dalam satu jam. Data Anda tidak kami bagikan.",
+        "ft.copy": "© 2026 · Ungasan, Bali · $850.000 / IDR 15,5 miliar",
+        "desc.title": "Deskripsi siap pakai untuk klien",
+        "desc.hint": "Salin dan kirim ke klien via WhatsApp atau email. Ganti [tautan] dengan tautan foto Anda (Google Drive).",
+        "desc.copy": "Salin",
+        "pop.h": "Terima kasih!", "pop.p": "Kami telah menerima permintaan Anda dan akan mengirim ketentuan kemitraan serta materi dalam satu jam.", "pop.close": "Tutup"
+      }
+    };
+
+    var BASE = {}, BASEPH = {};
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ var k=el.getAttribute('data-i18n'); if(BASE[k]==null) BASE[k]=el.innerHTML; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){ var k=el.getAttribute('data-i18n-ph'); if(BASEPH[k]==null) BASEPH[k]=el.getAttribute('placeholder'); });
+
+    function pick(l, k, base){ return (l==='ru') ? base[k] : ((DICT[l] && DICT[l][k]!=null) ? DICT[l][k] : base[k]); }
+    function applyWa(){
+      var m = WA_MSG[AG.lang] || WA_MSG.ru, href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(m);
+      document.querySelectorAll('a[data-wa]').forEach(function(a){ a.href = href; a.target = "_blank"; a.rel = "noopener"; });
+    }
+    /* RU visitor → RU+EN sheet; EN/ID visitor → ID+EN sheet */
+    function applyPdf(){
+      var f = (AG.lang === 'ru') ? 'white-villa-bali-info-sheet-ru.pdf' : 'white-villa-bali-info-sheet-id.pdf';
+      document.querySelectorAll('a[data-pdf]').forEach(function(a){ a.href = '/agents/' + f; });
+    }
+    function setLang(l){
+      if (LANGS.indexOf(l) < 0) l = "en";
+      AG.lang = l; CUR_LANG = l;
+      document.documentElement.setAttribute("lang", l);
+      document.querySelectorAll('[data-i18n]').forEach(function(el){ var v = pick(l, el.getAttribute('data-i18n'), BASE); if (v != null) el.innerHTML = v; });
+      document.querySelectorAll('[data-i18n-ph]').forEach(function(el){ var v = pick(l, el.getAttribute('data-i18n-ph'), BASEPH); if (v != null) el.setAttribute('placeholder', v); });
+      if (META[l]){ document.title = META[l].title; var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute('content', META[l].desc); }
+      document.querySelectorAll('.ag-lang__b').forEach(function(b){ b.classList.toggle('is-active', b.getAttribute('data-lang') === l); });
+      applyWa();
+      applyPdf();
+      document.querySelectorAll('.ag-faq__item.is-open .ag-faq__a').forEach(function(a){ a.style.maxHeight = a.scrollHeight + 'px'; });
+      try{ localStorage.setItem('wvb_ag_lang', l); }catch(e){}
+      document.dispatchEvent(new CustomEvent('ag:langchange'));
+    }
+    function detectLang(){
+      try{
+        if (window.WV_AG_LANG && LANGS.indexOf(window.WV_AG_LANG) > -1) return window.WV_AG_LANG;
+        var u = new URLSearchParams(location.search).get('lang'); if (u && LANGS.indexOf(u) > -1) return u;
+        var s = localStorage.getItem('wvb_ag_lang'); if (s && LANGS.indexOf(s) > -1) return s;
+      }catch(e){}
+      /* English is the primary language — fresh visitors always start in EN.
+         Explicit choices (URL ?lang=, switcher→localStorage) are honored above. */
+      return 'en';
+    }
+    document.querySelectorAll('.ag-lang__b').forEach(function(b){
+      b.addEventListener('click', function(){ var l = b.getAttribute('data-lang'); setLang(l); track('lang_' + l); });
+    });
+    setLang(detectLang());
+    var DRIVE_PHOTOS = "https://drive.google.com/drive/folders/19IbLOTT42r2hc6PKLx0ZpA02fjIwxWbW";
+    if (DRIVE_PHOTOS) document.querySelectorAll('a[data-drive="photos"]').forEach(function(a){ a.href = DRIVE_PHOTOS; });
+
+    /* галерея — лайтбокс (как на основном сайте) */
+    (function(){
+      var lb = document.getElementById("lightbox"); if(!lb) return;
+      var imgs = [].slice.call(document.querySelectorAll(".gal__item img")); if(!imgs.length) return;
+      var view = lb.querySelector(".lb__img"), cnt = lb.querySelector(".lb__count"), i = 0;
+      function show(n){ i=(n+imgs.length)%imgs.length; view.src=imgs[i].getAttribute("src"); view.alt=imgs[i].alt||""; cnt.textContent=(i+1)+" / "+imgs.length; }
+      function lopen(n){ show(n); lb.classList.add("is-open"); lb.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden"; }
+      function lclose(){ lb.classList.remove("is-open"); lb.setAttribute("aria-hidden","true"); document.body.style.overflow=""; }
+      imgs.forEach(function(im,n){ im.parentNode.addEventListener("click", function(){ lopen(n); }); });
+      lb.querySelector(".lb__close").addEventListener("click", lclose);
+      lb.querySelector(".lb__prev").addEventListener("click", function(e){ e.stopPropagation(); show(i-1); });
+      lb.querySelector(".lb__next").addEventListener("click", function(e){ e.stopPropagation(); show(i+1); });
+      lb.addEventListener("click", function(e){ if(e.target===lb) lclose(); });
+      document.addEventListener("keydown", function(e){ if(!lb.classList.contains("is-open")) return; if(e.key==="Escape") lclose(); else if(e.key==="ArrowLeft") show(i-1); else if(e.key==="ArrowRight") show(i+1); });
+    })();
+    var form = document.getElementById('agForm'), pop = document.getElementById('agPop');
+    function open(){ pop.classList.add('is-open'); pop.setAttribute('aria-hidden','false'); }
+    function close(){ pop.classList.remove('is-open'); pop.setAttribute('aria-hidden','true'); }
+    if(form) form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var ok = true;
+      ['name','email','phone'].forEach(function(n){
+        var el = form[n]; if(el){ var bad = !el.value.trim(); el.closest('.field').classList.toggle('is-err', bad); if(bad) ok = false; }
+      });
+      if(!ok) return;
+      var company = (form.company && form.company.value || "").trim(); // honeypot
+      if(company){ open(); form.reset(); return; } // бот заполнил скрытое поле — тихо отбрасываем
+      var name = (form.name.value || "").trim();
+      var email = (form.email.value || "").trim();
+      var phone = (form.phone.value || "").trim();
+      var note = (form.msg && form.msg.value || "").trim();
+      var contact = [email, phone].filter(Boolean).join(" · ");
+      var leadMsg = "🤝 ЗАЯВКА ОТ АГЕНТА (хочет продавать White Villa Bali за 5%)." + (note ? " Рынок/сообщение: " + note : "");
+      if(LEAD_ENDPOINT){
+        fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name, contact: contact, msg: leadMsg, lang: CUR_LANG, company: company }) }).catch(function(){});
+      }
+      track('generate_lead','Lead');
+      open(); form.reset();   // заявка ушла в Telegram через релей; прямой контакт — кнопки WhatsApp/Telegram
+    });
+    document.getElementById('agPopClose').addEventListener('click', close);
+    pop.addEventListener('click', function(e){ if(e.target===pop) close(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+
+    /* client-description modal + copy */
+    (function(){
+      var m = document.getElementById('agDesc'); if(!m) return;
+      function mopen(){ m.classList.add('is-open'); m.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+      function mclose(){ m.classList.remove('is-open'); m.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+      document.querySelectorAll('[data-open="agDesc"]').forEach(function(el){
+        el.addEventListener('click', mopen);
+        el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); mopen(); } });
+      });
+      m.querySelector('.ag-modal__x').addEventListener('click', mclose);
+      m.addEventListener('click', function(e){ if(e.target===m) mclose(); });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape' && m.classList.contains('is-open')) mclose(); });
+      function fallback(txt){ try{ var ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);}catch(e){} }
+      m.querySelectorAll('.ag-copy').forEach(function(b){
+        b.addEventListener('click', function(){
+          var t = document.getElementById(b.getAttribute('data-copy')); if(!t) return;
+          var txt = t.textContent;
+          var done = function(){
+            b.textContent = MISC.copied[AG.lang] || MISC.copied.ru;
+            setTimeout(function(){ var k = b.getAttribute('data-i18n'); b.textContent = k ? pick(AG.lang, k, BASE) : "Скопировать"; }, 1600);
+          };
+          if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(function(){ fallback(txt); done(); }); }
+          else { fallback(txt); done(); }
+        });
+      });
+    })();
+
+    /* ── floor plans: page-flip book + zoom (ported from buyer site) ── */
+    (function () {
+      var book = document.getElementById("plnBook");
+      if (!book) return;
+      var pages = Array.prototype.slice.call(book.querySelectorAll(".pln__page"));
+      var levels = document.querySelectorAll("#plnLevels .pln__level");
+      var prevB = document.getElementById("plnPrev"), nextB = document.getElementById("plnNext");
+      var capEl = document.getElementById("plnCap"), numEl = document.getElementById("plnNum");
+      var total = pages.length, cur = 0;
+      var PLN_CAPS = {
+        ru: [
+          "<b>Уровень&nbsp;01</b>&nbsp;— въезд, гараж на&nbsp;2&nbsp;авто, блок персонала, входная галерея, сад и&nbsp;бассейн.",
+          "<b>Уровень&nbsp;02</b>&nbsp;— гостиная с&nbsp;кинотеатром, кухня-столовая и&nbsp;мастер-спальня; выход на&nbsp;террасу к&nbsp;бассейну.",
+          "<b>Уровень&nbsp;03</b>&nbsp;— спальни-сьюты с&nbsp;гардеробными и&nbsp;ванными; кабинет, тёплый камень и&nbsp;дерево.",
+          "<b>Уровень&nbsp;04</b>&nbsp;— панорамная крыша 360°: террасы, gazebo, виды на&nbsp;океан, GWK и&nbsp;гору&nbsp;Агунг."
+        ],
+        en: [
+          "<b>Level&nbsp;01</b>&nbsp;— entrance, 2-car garage, staff quarters, entry gallery, garden and&nbsp;pool.",
+          "<b>Level&nbsp;02</b>&nbsp;— living room with cinema, kitchen-dining and&nbsp;master suite; opens to the pool terrace.",
+          "<b>Level&nbsp;03</b>&nbsp;— en-suite bedrooms with walk-in wardrobes; study, warm stone and&nbsp;wood.",
+          "<b>Level&nbsp;04</b>&nbsp;— 360° panoramic rooftop: terraces, gazebo, ocean, GWK and&nbsp;Mt&nbsp;Agung views."
+        ],
+        id: [
+          "<b>Lantai&nbsp;01</b>&nbsp;— pintu masuk, garasi 2&nbsp;mobil, area staf, galeri masuk, taman dan&nbsp;kolam renang.",
+          "<b>Lantai&nbsp;02</b>&nbsp;— ruang keluarga dengan bioskop, dapur-ruang makan dan&nbsp;kamar utama; akses ke teras kolam.",
+          "<b>Lantai&nbsp;03</b>&nbsp;— kamar-kamar en-suite dengan walk-in closet; ruang kerja, batu alam dan&nbsp;kayu.",
+          "<b>Lantai&nbsp;04</b>&nbsp;— rooftop panorama 360°: teras, gazebo, laut, patung GWK dan&nbsp;Gunung&nbsp;Agung."
+        ]
+      };
+      function CAPS(){ return PLN_CAPS[AG.lang] || PLN_CAPS.ru; }
+      pages.forEach(function (p, i) { p.style.zIndex = total - i; });
+      function render() {
+        pages.forEach(function (p, i) { p.classList.toggle("flipped", i < cur); p.classList.toggle("is-current", i === cur); });
+        levels.forEach(function (b, i) { b.classList.toggle("is-active", i === cur); });
+        var caps = CAPS();
+        if (capEl && caps[cur]) capEl.innerHTML = caps[cur];
+        if (numEl) numEl.textContent = "0" + (cur + 1);
+        if (prevB) prevB.disabled = cur === 0;
+        if (nextB) nextB.disabled = cur === total - 1;
+      }
+      document.addEventListener('ag:langchange', render);
+      function go(i) { cur = Math.max(0, Math.min(total - 1, i)); render(); }
+      if (nextB) nextB.addEventListener("click", function () { go(cur + 1); });
+      if (prevB) prevB.addEventListener("click", function () { go(cur - 1); });
+      levels.forEach(function (b, i) { b.addEventListener("click", function () { go(i); }); });
+      render();
+      var zoom = document.getElementById("plnZoom");
+      if (zoom) {
+        var zImg = zoom.querySelector("img");
+        function openZoom(src, alt) {
+          zImg.src = src; zImg.alt = alt || "Чертёж этажа";
+          zoom.classList.add("is-open"); zoom.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+        function closeZoom() {
+          zoom.classList.remove("is-open"); zoom.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = ""; zImg.src = "";
+        }
+        document.querySelectorAll(".pln__planimg").forEach(function (img) {
+          img.addEventListener("click", function () { openZoom(img.getAttribute("src"), img.getAttribute("alt")); });
+        });
+        zoom.addEventListener("click", closeZoom);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && zoom.classList.contains("is-open")) closeZoom();
+        });
+      }
+    })();
+
+    /* ── Объект: count-up чисел при появлении блока (узлы .ag-num, развязаны от i18n) ── */
+    (function () {
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var nums = [].slice.call(document.querySelectorAll(".ag-spec .ag-num[data-count]"));
+      if (!nums.length) return;
+      function countUp(el) {
+        var target = parseInt(el.getAttribute("data-count"), 10);
+        if (isNaN(target)) return;
+        if (reduce) { el.textContent = target; return; }
+        var dur = 1400, start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        el.textContent = "0";
+        requestAnimationFrame(step);
+      }
+      function activate(el) { if (!el.dataset.agCounted) { el.dataset.agCounted = "1"; countUp(el); } }
+      if (reduce) { nums.forEach(activate); return; }
+      var spec = document.querySelector(".ag-spec");
+      function check(){
+        var r = spec.getBoundingClientRect();
+        if (r.top < (window.innerHeight || 0) * 0.82 && r.bottom > 0){
+          nums.forEach(activate);
+          window.removeEventListener("scroll", check); window.removeEventListener("resize", check);
+        }
+      }
+      window.addEventListener("scroll", check, { passive: true });
+      window.addEventListener("resize", check);
+      check();
+    })();
+
+    /* ── Порядок работы: соединительная линия рисуется при скролле ── */
+    (function(){
+      var steps = document.querySelector('.ag-steps'); if(!steps) return;
+      var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      if(RM){ steps.classList.add('is-drawn'); return; }
+      function check(){
+        var r = steps.getBoundingClientRect();
+        if(r.top < (window.innerHeight||0)*0.85 && r.bottom > 0){
+          steps.classList.add('is-drawn');
+          window.removeEventListener('scroll', check); window.removeEventListener('resize', check);
+        }
+      }
+      window.addEventListener('scroll', check, {passive:true});
+      window.addEventListener('resize', check);
+      check();
+    })();
+
+    /* ── Телефон: авто-определение страны (intl-tel-input + запасной вариант) ── */
+    (function(){
+      var input = document.querySelector('#agForm input[name="phone"]'); if(!input) return;
+      var iti = null;
+      function geoIp(cb){
+        fetch('https://ipapi.co/json/').then(function(r){ return r.json(); })
+          .then(function(d){ cb((d && d.country_code ? d.country_code : 'id').toLowerCase()); })
+          .catch(function(){ var loc = (navigator.language || 'id-ID').split('-')[1] || 'id'; cb(loc.toLowerCase()); });
+      }
+      if(window.intlTelInput){
+        iti = window.intlTelInput(input, {
+          initialCountry: "auto",
+          geoIpLookup: geoIp,
+          separateDialCode: true,
+          preferredCountries: ["id","ru","au","sg","gb","us"],
+          autoPlaceholder: "aggressive",
+          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/js/utils.js"
+        });
+        var form = document.getElementById('agForm');
+        if(form) form.addEventListener('submit', function(){
+          if(iti && typeof iti.getNumber === 'function'){ var full = iti.getNumber(); if(full) input.value = full; }
+        }, true);
+      } else {
+        var DIAL = { ID:"+62", RU:"+7", AU:"+61", SG:"+65", GB:"+44", US:"+1", MY:"+60", TH:"+66", KZ:"+7", UA:"+380", DE:"+49", FR:"+33", AE:"+971", IN:"+91", CN:"+86" };
+        var region = ((navigator.language || 'id-ID').split('-')[1] || 'ID').toUpperCase();
+        var code = DIAL[region] || '+62';
+        if(!input.value.trim()){ input.value = code + ' '; input.placeholder = code + ' …'; }
+        input.addEventListener('focus', function(){ var v = input.value; input.setSelectionRange(v.length, v.length); });
+      }
+    })();
+
+    /* ── helper: вызывает cb, когда блок входит в зону видимости (scroll-проверка, надёжно) ── */
+    function onEnter(el, cb){
+      if(!el) return;
+      var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      if(RM){ cb(); return; }
+      var done=false;
+      function check(){
+        if(done) return;
+        var r=el.getBoundingClientRect();
+        if(r.top < (window.innerHeight||0)*0.86 && r.bottom>0){ done=true; cb(); window.removeEventListener('scroll',check); window.removeEventListener('resize',check); }
+      }
+      window.addEventListener('scroll',check,{passive:true});
+      window.addEventListener('resize',check);
+      check();
+    }
+
+    /* ── ① «Выгода»: count-up крупных цифр (80 / 15) ── */
+    (function(){
+      var bens=document.querySelector('.ag-bens'); if(!bens) return;
+      var nums=[].slice.call(bens.querySelectorAll('[data-count]'));
+      var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      function cu(el){
+        var t=parseInt(el.getAttribute('data-count'),10); if(isNaN(t)) return;
+        if(reduce){ el.textContent=t; return; }
+        var dur=1300,s=null;
+        function step(ts){ if(!s)s=ts; var p=Math.min((ts-s)/dur,1); el.textContent=Math.round(t*(1-Math.pow(1-p,3))); if(p<1)requestAnimationFrame(step); }
+        el.textContent='0'; requestAnimationFrame(step);
+      }
+      onEnter(bens, function(){ nums.forEach(cu); });
+    })();
+
+    /* ── ② «Оформление»: прорисовка вертикальных линий-разделителей ── */
+    (function(){
+      var own=document.querySelector('.ag-own');
+      onEnter(own, function(){ own.classList.add('is-drawn'); });
+    })();
+
+    /* ── FAQ агентов: аккордеон ── */
+    (function(){
+      [].slice.call(document.querySelectorAll('.ag-faq__item')).forEach(function(it){
+        var q=it.querySelector('.ag-faq__q'), a=it.querySelector('.ag-faq__a');
+        if(!q||!a) return;
+        q.addEventListener('click', function(){
+          var open=it.classList.contains('is-open');
+          it.classList.toggle('is-open', !open);
+          a.style.maxHeight = open ? '0px' : (a.scrollHeight + 'px');
+        });
+      });
+    })();
+
+    /* ── analytics: track key clicks (WhatsApp / Telegram / Drive) ── */
+    document.addEventListener('click', function(e){
+      var a = (e.target && e.target.closest) ? e.target.closest('a') : null; if(!a) return;
+      if(a.matches('[data-wa]')) track('whatsapp_click','Contact');
+      else if(a.href && a.href.indexOf('t.me') > -1) track('telegram_click','Contact');
+      else if(a.matches('[data-drive]')) track('drive_open','ViewContent');
+      else if(a.matches('[data-pdf]')) track('pdf_download','ViewContent');
+    }, true);
+  })();
+</script>
+</body>
+</html>
