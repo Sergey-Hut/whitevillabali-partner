@@ -1,0 +1,4 @@
+Contact: mailto:sergey.hat.banya@gmail.com
+Preferred-Languages: ru, en
+Canonical: https://partner.whitevillabali.com/.well-known/security.txt
+Expires: 2027-07-28T00:00:00.000Z
