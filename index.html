@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://mc.yandex.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://wvb-relay.vercel.app; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>White Villa Bali — for agents · 5% commission</title>
 <meta name="description" content="Sell White Villa Bali and earn a 5% commission. Turnkey villa in Ungasan, Bali — $850,000 (IDR 15.5 bn). Directly from the owner." />
 <link rel="canonical" href="https://partner.whitevillabali.com/" />
@@ -20,8 +22,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/style.css?v=20260624d" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/css/intlTelInput.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/css/intlTelInput.min.css" integrity="sha384-15PvEpDxKSzR+s0B7c+AAR5NxVUcF3z4EZ3bcceaDtYOZ86fzY7jpZMd0li/upRS" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/js/intlTelInput.min.js" integrity="sha384-+xPvRWtN0ducJOKisU1x3fti8rlWtMouPf9eL+gVjk0mThDa9urC+Oov1gAGiX+u" crossorigin="anonymous"></script>
 <style>
   /* ===== Agents page — built on the site's Bali Stone tokens ===== */
   .ag-top{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
@@ -804,8 +806,9 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
 <div class="ag-pop" id="agPop" aria-hidden="true">
   <div class="ag-pop__card">
     <div class="ag-pop__ic">✓</div>
-    <h3 data-i18n="pop.h">Спасибо за заявку!</h3>
-    <p data-i18n="pop.p">Мы получили вашу заявку и в течение часа пришлём условия партнёрства и материалы.</p>
+    <h3 id="agPopH" data-i18n="pop.h">Спасибо за заявку!</h3>
+    <p id="agPopP" data-i18n="pop.p">Мы получили вашу заявку и в течение часа пришлём условия партнёрства и материалы.</p>
+    <a class="btn btn--accent" id="agPopWa" style="display:none" target="_blank" rel="noopener"></a>
     <button class="btn btn--accent" id="agPopClose" data-i18n="pop.close">Закрыть</button>
   </div>
 </div>
@@ -832,6 +835,11 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
       id: "Halo! Saya agen properti dan ingin menjual White Villa Bali dengan komisi 5%. Mohon kirimkan ketentuan kemitraan dan materinya."
     };
     var MISC = { copied: { ru: "Скопировано ✓", en: "Copied ✓", id: "Tersalin ✓" } };
+    var POP_FALLBACK = {
+      ru: { h: "Не удалось отправить автоматически", p: "Нажмите ниже, чтобы отправить заявку в WhatsApp.", wa: "Отправить в WhatsApp" },
+      en: { h: "Couldn't send automatically", p: "Tap below to send your request via WhatsApp.", wa: "Send via WhatsApp" },
+      id: { h: "Tidak terkirim otomatis", p: "Ketuk di bawah untuk mengirim permintaan Anda lewat WhatsApp.", wa: "Kirim lewat WhatsApp" }
+    };
     var META = {
       ru: { title: "White Villa Bali — для агентов · комиссия 5%",
             desc: "Продайте White Villa Bali и получите 5% комиссии. Вилла под ключ в Унгасане, Бали — $850 000 (IDR 15,5 млрд). Напрямую от собственника." },
@@ -1096,6 +1104,23 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
     var form = document.getElementById('agForm'), pop = document.getElementById('agPop');
     function open(){ pop.classList.add('is-open'); pop.setAttribute('aria-hidden','false'); }
     function close(){ pop.classList.remove('is-open'); pop.setAttribute('aria-hidden','true'); }
+    function openFallback(waHref){
+      // relay failed — show a tappable WhatsApp link instead of the plain "thank you"
+      // (an auto window.open() here would be popup-blocked, it runs async in a .catch())
+      var f = POP_FALLBACK[AG.lang] || POP_FALLBACK.ru;
+      var waEl = document.getElementById('agPopWa');
+      document.getElementById('agPopH').textContent = f.h;
+      document.getElementById('agPopP').textContent = f.p;
+      waEl.textContent = f.wa; waEl.href = waHref; waEl.style.display = "";
+      waEl.onclick = function(){ track('generate_lead','Lead'); };
+      open();
+    }
+    function openSuccess(){
+      var waEl = document.getElementById('agPopWa'); waEl.style.display = "none";
+      document.getElementById('agPopH').textContent = pick(AG.lang, 'pop.h', BASE);
+      document.getElementById('agPopP').textContent = pick(AG.lang, 'pop.p', BASE);
+      open();
+    }
     if(form) form.addEventListener('submit', function(e){
       e.preventDefault();
       var ok = true;
@@ -1111,12 +1136,21 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
       var note = (form.msg && form.msg.value || "").trim();
       var contact = [email, phone].filter(Boolean).join(" · ");
       var leadMsg = "🤝 ЗАЯВКА ОТ АГЕНТА (хочет продавать White Villa Bali за 5%)." + (note ? " Рынок/сообщение: " + note : "");
+      var waHref = "https://wa.me/" + WA + "?text=" + encodeURIComponent(leadMsg + " — " + name + " (" + contact + ")");
       if(LEAD_ENDPOINT){
         fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, contact: contact, msg: leadMsg, lang: CUR_LANG, company: company }) }).catch(function(){});
+          body: JSON.stringify({ name: name, contact: contact, msg: leadMsg, lang: CUR_LANG, company: company }) })
+          .then(function(r){ if(!r.ok) throw new Error("relay "+r.status); track('generate_lead','Lead'); openSuccess(); })
+          .catch(function(){
+            // релей не ответил — не теряем заявку, показываем ссылку на WhatsApp для ручного клика
+            openFallback(waHref);
+          });
+      } else {
+        window.open(waHref, "_blank"); // синхронный вызов внутри submit — попап-блокер не мешает
+        track('generate_lead','Lead');
+        openSuccess();
       }
-      track('generate_lead','Lead');
-      open(); form.reset();   // заявка ушла в Telegram через релей; прямой контакт — кнопки WhatsApp/Telegram
+      form.reset();   // заявка ушла в Telegram через релей; прямой контакт — кнопки WhatsApp/Telegram
     });
     document.getElementById('agPopClose').addEventListener('click', close);
     pop.addEventListener('click', function(e){ if(e.target===pop) close(); });
@@ -1273,9 +1307,14 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
       var input = document.querySelector('#agForm input[name="phone"]'); if(!input) return;
       var iti = null;
       function geoIp(cb){
-        fetch('https://ipapi.co/json/').then(function(r){ return r.json(); })
-          .then(function(d){ cb((d && d.country_code ? d.country_code : 'id').toLowerCase()); })
-          .catch(function(){ var loc = (navigator.language || 'id-ID').split('-')[1] || 'id'; cb(loc.toLowerCase()); });
+        /* No third-party IP lookup (privacy) — guess from browser locale only.
+           navigator.language often has no region ("ru", "en") — map bare language
+           codes to the country most of this site's visitors actually are in. */
+        var LANG_COUNTRY = { ru: "ru", id: "id", en: "id" };
+        var lang = (navigator.language || "id-ID");
+        var region = lang.split('-')[1];
+        var country = region ? region.toLowerCase() : (LANG_COUNTRY[lang.split('-')[0].toLowerCase()] || "id");
+        cb(country);
       }
       if(window.intlTelInput){
         iti = window.intlTelInput(input, {
