@@ -1401,8 +1401,8 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
     /* ── analytics: track key clicks (WhatsApp / Telegram / Drive) ── */
     document.addEventListener('click', function(e){
       var a = (e.target && e.target.closest) ? e.target.closest('a') : null; if(!a) return;
-      if(a.matches('[data-wa]')) track('whatsapp_click','Lead');
-      else if(a.href && a.href.indexOf('t.me') > -1) track('telegram_click','Lead');
+      if(a.matches('[data-wa]')) track('whatsapp_click','Contact');
+      else if(a.href && a.href.indexOf('t.me') > -1) track('telegram_click','Contact');
       else if(a.matches('[data-drive]')) track('drive_open','ViewContent');
       else if(a.matches('[data-pdf]')) track('pdf_download','ViewContent');
     }, true);
