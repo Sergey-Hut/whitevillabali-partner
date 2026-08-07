@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://www.googletagmanager.com https://www.facebook.com https://wvb-relay.vercel.app; base-uri 'self'; form-action 'self'; object-src 'none'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://www.googletagmanager.com https://www.facebook.com https://wvb-relay.vercel.app; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self'; object-src 'none'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>White Villa Bali — for agents · 5% commission</title>
 <meta name="description" content="Sell White Villa Bali and earn a 5% commission. Turnkey villa in Ungasan, Bali — US$850,000 (IDR 15.5 bn). Directly from the owner." />
@@ -81,6 +81,7 @@
   .ag-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}
   .ag-video{position:relative;display:block;margin-top:clamp(28px,4vw,44px);border-radius:6px;overflow:hidden;aspect-ratio:16/9}
   .ag-video img{width:100%;height:100%;object-fit:cover;display:block}
+  .ag-video iframe{width:100%;height:100%;display:block;border:0}
   .ag-video__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,15,11,.18);transition:background .3s}
   .ag-video:hover .ag-video__play{background:rgba(18,15,11,.32)}
   .ag-video__play>span{width:84px;height:84px;border-radius:50%;background:rgba(244,239,228,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.3)}
@@ -507,10 +508,10 @@ fbq('track', 'PageView');
     <p class="ag-lead" data-i18n="vid.lead">Съёмка с дрона и обход внутри — крыша, бассейн, гостиная, кухня.</p>
   </div>
   <div class="wrap">
-    <a class="ag-video" href="https://youtu.be/jvJCx42v9xw" target="_blank" rel="noopener" aria-label="Смотреть видео-тур">
+    <div class="ag-video" id="agVideoMedia" data-yt="jvJCx42v9xw">
       <img src="/assets/img/aerial.webp" alt="Видео-тур White Villa Bali">
-      <span class="ag-video__play"><span></span></span>
-    </a>
+      <button type="button" class="ag-video__play" id="agVideoPlay" aria-label="Смотреть видео-тур"><span></span></button>
+    </div>
     <div class="ag-drive">
       <a class="btn btn--line" href="https://youtu.be/jvJCx42v9xw" target="_blank" rel="noopener" data-i18n="vid.youtube">Смотреть на YouTube</a>
       <a class="btn btn--accent" href="#contact" data-i18n="cta.contact">Связаться</a>
@@ -1395,6 +1396,23 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
           it.classList.toggle('is-open', !open);
           a.style.maxHeight = open ? '0px' : (a.scrollHeight + 'px');
         });
+      });
+    })();
+
+    /* ── видео: постер → iframe по клику (остаёмся на странице) ── */
+    (function(){
+      var media = document.getElementById('agVideoMedia'), play = document.getElementById('agVideoPlay');
+      if(!media || !play) return;
+      play.addEventListener('click', function(){
+        var id = media.getAttribute('data-yt'); if(!id) return;
+        var ifr = document.createElement('iframe');
+        ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white';
+        ifr.title = 'Видео-тур White Villa Bali';
+        ifr.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+        ifr.setAttribute('allowfullscreen', '');
+        media.innerHTML = '';
+        media.appendChild(ifr);
+        track('video_play', 'ViewContent');
       });
     })();
 
