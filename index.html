@@ -373,6 +373,19 @@
   /* ════════ REBUILD 26.09: registration offer ════════ */
   .ag-hero__sub{max-width:56ch}
   .ag-hero .eyebrow{margin-bottom:clamp(22px,4.5vh,52px)}
+  .ag-tour{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;margin-top:clamp(28px,4vw,44px)}
+  .ag-tour .ag-video{margin-top:0;aspect-ratio:9/16;width:100%;max-width:340px;background:#1b1813}
+  .ag-tour__k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+  .ag-chap{list-style:none;padding:0;margin:0 0 6px;border-top:1px solid var(--line)}
+  .ag-chap li{border-bottom:1px solid var(--line)}
+  .ag-chap button{display:flex;gap:18px;align-items:baseline;width:100%;padding:13px 2px;background:none;border:0;cursor:pointer;text-align:left;font:inherit;font-size:clamp(15px,1.4vw,17px);color:var(--ink);transition:color .25s,padding .25s}
+  .ag-chap button:hover{color:var(--accent);padding-left:8px}
+  .ag-chap button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ag-chap b{font-family:"Cormorant",serif;font-size:1.35em;font-weight:600;color:var(--accent);min-width:2.6em;font-variant-numeric:tabular-nums}
+  .ag-vid2{margin-top:clamp(48px,6vw,84px)}
+  .ag-vid2__h{font-family:"Cormorant",serif;font-weight:400;font-size:clamp(24px,2.6vw,34px);color:var(--ink);letter-spacing:-.005em}
+  .ag-vid2__p{color:var(--ink-soft);font-size:clamp(15px,1.4vw,17px);margin-top:8px}
+  @media(max-width:760px){.ag-tour{grid-template-columns:1fr;gap:26px}.ag-tour .ag-video{max-width:min(100%,360px);margin:0 auto}}
   .ag-hero__in{padding-bottom:clamp(100px,16vh,190px)}
   .ag-hero h1{font-size:clamp(29px,4.7vw,66px);text-wrap:balance}
   .ag-h1s{display:block;font-family:"Work Sans",sans-serif;font-size:max(.28em,16px);font-weight:400;letter-spacing:.02em;line-height:1.3;color:rgba(244,239,228,.86);margin-top:.5em;text-shadow:0 1px 14px rgba(0,0,0,.5)}
@@ -540,20 +553,44 @@ fbq('track', 'PageView');
 </section>
 
 <!-- VIDEO -->
-<section class="section">
+<section class="section" id="video">
   <div class="ag-head">
     <p class="eyebrow" data-i18n="vid.eyebrow">Видео</p>
-    <h2 class="ag-h2" data-i18n="vid.h2">Вилла за одну минуту</h2>
-    <p class="ag-lead" data-i18n="vid.lead">Съёмка с дрона и обход внутри — крыша, бассейн, гостиная, кухня.</p>
+    <h2 class="ag-h2" data-i18n="vid.h2">Полный обход виллы: от улицы до крыши</h2>
+    <p class="ag-lead" data-i18n="vid.lead">Снято на телефон, без монтажа — так вы увидите виллу вживую: подъезд по дороге, фасад и бассейн, все комнаты, кинотеатр и крыша с панорамой 360°.</p>
   </div>
   <div class="wrap">
-    <div class="ag-video" id="agVideoMedia" data-yt="jvJCx42v9xw">
-      <img src="/assets/img/aerial.webp" alt="Видео-тур White Villa Bali" loading="lazy" decoding="async">
-      <button type="button" class="ag-video__play" id="agVideoPlay" aria-label="Смотреть видео-тур"><span></span></button>
+    <div class="ag-tour">
+      <div class="ag-video ag-video--v" id="agTourMedia" data-yt="GaRofg_1a4Y" data-title="Полный обход White Villa Bali">
+        <img src="/assets/img/tour-walkthrough.webp" alt="Полный видео-обход White Villa Bali" width="720" height="1280" loading="lazy" decoding="async">
+        <button type="button" class="ag-video__play" aria-label="Смотреть полный обход виллы"><span></span></button>
+      </div>
+      <div class="ag-tour__side">
+        <p class="ag-tour__k" data-i18n="tour.k">Что в ролике · 2:47</p>
+        <ol class="ag-chap">
+          <li><button type="button" data-start="0"><b>0:00</b><span data-i18n="tour.c1">Подъезд по дороге</span></button></li>
+          <li><button type="button" data-start="20"><b>0:20</b><span data-i18n="tour.c2">Фасад и бассейн</span></button></li>
+          <li><button type="button" data-start="45"><b>0:45</b><span data-i18n="tour.c3">Спальни и гостиные</span></button></li>
+          <li><button type="button" data-start="105"><b>1:45</b><span data-i18n="tour.c4">Домашний кинотеатр</span></button></li>
+          <li><button type="button" data-start="135"><b>2:15</b><span data-i18n="tour.c5">Лестница и верхний этаж</span></button></li>
+          <li><button type="button" data-start="155"><b>2:35</b><span data-i18n="tour.c6">Крыша: панорама 360°, океан</span></button></li>
+        </ol>
+        <div class="ag-drive">
+          <a class="btn btn--line" href="https://youtu.be/GaRofg_1a4Y" target="_blank" rel="noopener" data-i18n="vid.youtube">Смотреть на YouTube</a>
+          <a class="btn btn--accent" href="#contact" data-i18n="cta.contact">Связаться</a>
+        </div>
+      </div>
     </div>
-    <div class="ag-drive">
-      <a class="btn btn--line" href="https://youtu.be/jvJCx42v9xw" target="_blank" rel="noopener" data-i18n="vid.youtube">Смотреть на YouTube</a>
-      <a class="btn btn--accent" href="#contact" data-i18n="cta.contact">Связаться</a>
+    <div class="ag-vid2">
+      <h3 class="ag-vid2__h" data-i18n="vid2.h">Вилла за одну минуту</h3>
+      <p class="ag-vid2__p" data-i18n="vid2.p">Съёмка с дрона и обход внутри — крыша, бассейн, гостиная, кухня.</p>
+      <div class="ag-video" id="agVideoMedia" data-yt="jvJCx42v9xw" data-title="Видео-тур White Villa Bali">
+        <img src="/assets/img/aerial.webp" alt="Видео-тур White Villa Bali" loading="lazy" decoding="async">
+        <button type="button" class="ag-video__play" id="agVideoPlay" aria-label="Смотреть видео-тур"><span></span></button>
+      </div>
+      <div class="ag-drive">
+        <a class="btn btn--line" href="https://youtu.be/jvJCx42v9xw" target="_blank" rel="noopener" data-i18n="vid.youtube">Смотреть на YouTube</a>
+      </div>
     </div>
   </div>
 </section>
@@ -958,9 +995,18 @@ Pertanyaan & viewing: [kontak Anda]</pre>
         "gal.drive": "All photos · Google Drive",
         "gal.driveHint": "View or download the full high-resolution set.",
         "vid.eyebrow": "Video",
-        "vid.h2": "The villa in one minute",
-        "vid.lead": "Drone footage and an interior walkthrough — rooftop, pool, living room, kitchen.",
+        "vid.h2": "Full villa walkthrough: from the street to the roof",
+        "vid.lead": "Filmed on a phone, no editing — exactly as you would see it in person: the drive up the road, the facade and pool, every room, the home theater and the roof with a 360° view.",
         "vid.youtube": "Watch on YouTube",
+        "vid2.h": "The villa in one minute",
+        "vid2.p": "Drone footage and an interior walkthrough — rooftop, pool, living room, kitchen.",
+        "tour.k": "In the video · 2:47",
+        "tour.c1": "The drive up the road",
+        "tour.c2": "Facade and pool",
+        "tour.c3": "Bedrooms and living areas",
+        "tour.c4": "Home theater",
+        "tour.c5": "Staircase and upper floor",
+        "tour.c6": "Roof: 360° view, ocean",
         "loc.eyebrow": "Location",
         "loc.h2": "Ungasan — the quiet top of Bukit",
         "loc.lead": "One of the most sought-after areas in south Bali: cliffs, white beaches and ocean sunsets. The best beaches are minutes away, the airport about 25 minutes.",
@@ -1140,9 +1186,18 @@ Pertanyaan & viewing: [kontak Anda]</pre>
         "gal.drive": "Semua foto · Google Drive",
         "gal.driveHint": "Lihat atau unduh set lengkap resolusi tinggi.",
         "vid.eyebrow": "Video",
-        "vid.h2": "Vila dalam satu menit",
-        "vid.lead": "Rekaman drone dan tur interior — rooftop, kolam, ruang keluarga, dapur.",
+        "vid.h2": "Tur lengkap vila: dari jalan hingga atap",
+        "vid.lead": "Direkam dengan ponsel, tanpa editing — persis seperti melihat langsung: jalan menuju vila, fasad dan kolam, setiap ruangan, home theater, dan atap dengan pemandangan 360°.",
         "vid.youtube": "Tonton di YouTube",
+        "vid2.h": "Vila dalam satu menit",
+        "vid2.p": "Rekaman drone dan tur interior — rooftop, kolam, ruang keluarga, dapur.",
+        "tour.k": "Isi video · 2:47",
+        "tour.c1": "Jalan menuju vila",
+        "tour.c2": "Fasad dan kolam renang",
+        "tour.c3": "Kamar tidur dan ruang tamu",
+        "tour.c4": "Home theater",
+        "tour.c5": "Tangga dan lantai atas",
+        "tour.c6": "Atap: pemandangan 360°, laut",
         "loc.eyebrow": "Lokasi",
         "loc.h2": "Ungasan — puncak tenang Bukit",
         "loc.lead": "Salah satu kawasan paling diminati di Bali selatan: tebing, pantai putih, dan matahari terbenam di laut. Pantai terbaik beberapa menit saja, bandara sekitar 25 menit.",
@@ -1656,20 +1711,29 @@ Pertanyaan & viewing: [kontak Anda]</pre>
       });
     })();
 
-    /* ── видео: постер → iframe по клику (остаёмся на странице) ── */
+    /* ── видео: постер → iframe по клику; главы ролика запускают с нужной секунды ── */
     (function(){
-      var media = document.getElementById('agVideoMedia'), play = document.getElementById('agVideoPlay');
-      if(!media || !play) return;
-      play.addEventListener('click', function(){
+      function mount(media, sec){
         var id = media.getAttribute('data-yt'); if(!id) return;
         var ifr = document.createElement('iframe');
-        ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white';
-        ifr.title = 'Видео-тур White Villa Bali';
+        ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white' + (sec ? '&start=' + sec : '');
+        ifr.title = media.getAttribute('data-title') || 'Видео White Villa Bali';
         ifr.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
         ifr.setAttribute('allowfullscreen', '');
         media.innerHTML = '';
         media.appendChild(ifr);
-        track('video_play', 'ViewContent');
+        track('video_play', 'ViewContent', { place: media.id === 'agTourMedia' ? 'tour' : 'drone', start: sec || 0 });
+      }
+      document.querySelectorAll('.ag-video[data-yt]').forEach(function(media){
+        var play = media.querySelector('.ag-video__play'); if(!play) return;
+        play.addEventListener('click', function(){ mount(media, 0); });
+      });
+      document.querySelectorAll('.ag-chap button[data-start]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var media = document.getElementById('agTourMedia'); if(!media) return;
+          mount(media, parseInt(btn.getAttribute('data-start'), 10) || 0);
+          if (window.innerWidth < 761 && media.scrollIntoView) media.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
       });
     })();
 
