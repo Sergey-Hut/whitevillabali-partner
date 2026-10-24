@@ -81,9 +81,9 @@
       "4 bedrooms, a 360° panoramic rooftop with ocean views and an open-air pool. Turnkey — directly from the owner, no agent commission.",
     "Запросить частный показ": "Request a private viewing",
     // facts
-    "Готова к жизни и аренде": "Ready to live in and rent out",
-    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
-      "Four levels arranged around light and the view. Completed in 2018, handed over turnkey — furniture, appliances and a Sonos system already inside. Move in or rent from day one.",
+    "Готова к жизни": "Ready to live in",
+    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте и живите.":
+      "Four levels arranged around light and the view. Completed in 2018, handed over turnkey — furniture, appliances and a Sonos system already inside. Move in and live.",
     "дом": "house", "участок": "land", "спальни": "bedrooms", "санузлов": "bathrooms", "крыша": "rooftop", "год": "year",
     // video
     "Видеотур": "Video tour", "Дом за одну минуту": "The home in one minute",
@@ -108,8 +108,8 @@
       "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for IDR 15.3 bn.",
     // amenities
     "Оснащение": "Amenities", "Всё уже в доме": "Everything's already in the house",
-    "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
-      "From the cinema to multiroom audio — the villa is fully equipped, turnkey. Move in or rent: nothing left to buy.",
+    "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте и живите: докупать ничего не нужно.":
+      "From the cinema to multiroom audio — the villa is fully equipped, turnkey. Move in and live: nothing left to buy.",
     "Домашний кинотеатр": "Home cinema", "Большой экран и акустика": "Big screen and sound system",
     "Панорамный бассейн": "Panoramic pool", "Вдоль линии океана": "Along the ocean line",
     "Крыша 360°": "360° rooftop", "Океан, GWK и Агунг": "Ocean, GWK and Mt Agung",
@@ -204,8 +204,8 @@
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "We can structure it for any buyer. Indonesian citizens — SHM (full ownership). Foreigners — Hak Pakai as an individual or HGB via your company (PT PMA). The form and terms are confirmed by a licensed notary (PPAT).",
     "Что входит в цену Rp 15,3 млрд?": "What's included in the IDR 15.3 bn price?",
-    "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
-      "A turnkey villa: 4 bedrooms, 5+ bathrooms, pool, home cinema, 360° rooftop, a fitted kitchen, a Sonos system, furniture, a 2-car garage and staff quarters. Move in or rent — nothing left to buy.",
+    "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте и живите — докупать ничего не нужно.":
+      "A turnkey villa: 4 bedrooms, 5+ bathrooms, pool, home cinema, 360° rooftop, a fitted kitchen, a Sonos system, furniture, a 2-car garage and staff quarters. Move in and live — nothing left to buy.",
     "Какой доход и чем он подтверждён?": "What's the income and how is it backed?",
     "Консервативно — 12–15% чистыми в год при загрузке около 70%. Доход подтверждают реальные договоры аренды; показываем их приватно на встрече, с защитой персональных данных.":
       "Conservatively — 12–15% net per year at around 70% occupancy. The income is backed by real rental contracts; we show them privately at a meeting, with personal data protected.",
@@ -254,9 +254,9 @@
     "4 спальни, панорамная крыша 360° с видом на океан и открытый бассейн. Под ключ — напрямую от собственника, без комиссии агента.":
       "4 kamar tidur, rooftop panorama 360° dengan pemandangan laut dan kolam renang terbuka. Siap huni — langsung dari pemilik, tanpa komisi agen.",
     "Запросить частный показ": "Minta viewing privat",
-    "Готова к жизни и аренде": "Siap dihuni dan disewakan",
-    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
-      "Empat tingkat yang tertata mengikuti cahaya dan pemandangan. Selesai 2018, diserahkan siap huni — furnitur, peralatan, dan sistem Sonos sudah di dalam. Tinggal masuk atau langsung disewakan.",
+    "Готова к жизни": "Siap dihuni",
+    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте и живите.":
+      "Empat tingkat yang tertata mengikuti cahaya dan pemandangan. Selesai 2018, diserahkan siap huni — furnitur, peralatan, dan sistem Sonos sudah di dalam. Tinggal masuk dan huni.",
     "дом": "rumah", "участок": "tanah", "спальни": "kamar tidur", "санузлов": "kamar mandi", "крыша": "rooftop", "год": "tahun",
     "Видеотур": "Video tur", "Дом за одну минуту": "Rumah dalam satu menit",
     "Крыша 360°, интерьеры, бассейн и линия океана — с воздуха и внутри. Без монтажных трюков.":
@@ -277,8 +277,8 @@
     "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
       "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga Rp 15,3 miliar.",
     "Оснащение": "Fasilitas", "Всё уже в доме": "Semua sudah ada di rumah",
-    "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
-      "Dari home cinema sampai audio multiroom — vila lengkap dan siap huni. Tinggal masuk atau disewakan: tak perlu beli apa pun lagi.",
+    "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте и живите: докупать ничего не нужно.":
+      "Dari home cinema sampai audio multiroom — vila lengkap dan siap huni. Tinggal masuk dan huni: tak perlu beli apa pun lagi.",
     "Домашний кинотеатр": "Home cinema", "Большой экран и акустика": "Layar besar & sound system",
     "Панорамный бассейн": "Kolam panorama", "Вдоль линии океана": "Menghadap garis laut",
     "Крыша 360°": "Rooftop 360°", "Океан, GWK и Агунг": "Laut, GWK & Gunung Agung",
@@ -367,8 +367,8 @@
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "Bisa untuk pembeli mana pun. WNI — SHM (kepemilikan penuh). Asing — Hak Pakai atas nama pribadi atau HGB via perusahaan Anda (PT PMA). Bentuk dan jangka waktunya dikonfirmasi notaris berlisensi (PPAT).",
     "Что входит в цену Rp 15,3 млрд?": "Apa yang termasuk dalam harga Rp 15,3 miliar?",
-    "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
-      "Vila siap huni: 4 kamar tidur, 5+ kamar mandi, kolam, home cinema, rooftop 360°, dapur lengkap, sistem Sonos, furnitur, garasi 2 mobil, dan ruang staf. Tinggal masuk atau disewakan — tak perlu beli apa pun lagi.",
+    "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте и живите — докупать ничего не нужно.":
+      "Vila siap huni: 4 kamar tidur, 5+ kamar mandi, kolam, home cinema, rooftop 360°, dapur lengkap, sistem Sonos, furnitur, garasi 2 mobil, dan ruang staf. Tinggal masuk dan huni — tak perlu beli apa pun lagi.",
     "Какой доход и чем он подтверждён?": "Berapa pendapatannya dan apa buktinya?",
     "Консервативно — 12–15% чистыми в год при загрузке около 70%. Доход подтверждают реальные договоры аренды; показываем их приватно на встрече, с защитой персональных данных.":
       "Secara konservatif — 12–15% bersih per tahun dengan okupansi sekitar 70%. Pendapatan didukung kontrak sewa nyata; kami tunjukkan secara pribadi saat pertemuan, dengan data pribadi dilindungi.",
