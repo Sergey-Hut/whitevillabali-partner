@@ -9,14 +9,20 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lowPower = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
 
+  // The hero reveal waits for BOTH the page load and the intro loader fading out;
+  // otherwise on a warm cache it plays underneath the loader and nobody sees it.
+  var heroGate = 2;
+  function heroReady() { if (--heroGate === 0) revealHero(); }
+
   /* ---- intro loader ---- */
   (function () {
     var loader = document.getElementById("loader");
-    if (!loader) return;
+    if (!loader) { heroReady(); return; }
     function remove() { if (loader.parentNode) loader.parentNode.removeChild(loader); }
-    if (reduce || SHOT) { remove(); return; }
+    if (reduce || SHOT) { remove(); heroReady(); return; }
     setTimeout(function () {
       loader.classList.add("is-done");
+      heroReady();
       setTimeout(remove, 900);
     }, 1500);
   })();
@@ -55,10 +61,13 @@
   /* ---- nav stuck ---- */
   var nav = document.querySelector("[data-nav]");
   var burgerEl = document.getElementById("navBurger");
+  var toTop = document.getElementById("toTop");
   function setNav() {
-    var stuck = (window.scrollY || 0) > window.innerHeight * 0.7;
+    var y = window.scrollY || 0;
+    var stuck = y > window.innerHeight * 0.7;
     if (nav) nav.classList.toggle("is-stuck", stuck);
     if (burgerEl) burgerEl.classList.toggle("is-dark", stuck);
+    if (toTop) toTop.classList.toggle("is-shown", y > window.innerHeight * 0.9);
   }
 
   /* ---- smooth scroll (Lenis) ---- */
@@ -70,6 +79,10 @@
     lenis.on("scroll", function () { setProgress(); setNav(); });
   }
   window.addEventListener("scroll", function () { setProgress(); setNav(); }, { passive: true });
+
+  if (toTop) toTop.addEventListener("click", function () {
+    if (lenis) lenis.scrollTo(0, { duration: 1.4 }); else window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  });
 
   /* anchor smooth scroll */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
@@ -114,6 +127,8 @@
 
   // hero reveals on load (so it's visible immediately, even for screenshots)
   function revealHero() {
+    var hero = document.querySelector(".hero");
+    if (hero) hero.classList.add("is-live");
     document.querySelectorAll(".hero [data-reveal], .hero__title .line").forEach(function (el, i) {
       setTimeout(function () { reveal(el); }, reduce ? 0 : 120 + i * 110);
     });
@@ -257,15 +272,15 @@
     var rv = document.getElementById("invRateV"), ov = document.getElementById("invOccV");
     var g = document.getElementById("invGross"), nt = document.getElementById("invNet"),
         yl = document.getElementById("invYield"), pay = document.getElementById("invPay");
-    var PRICE = 850000, NETF = 0.45;
+    var PRICE = 15300000000, NETF = 0.45;
     function ru(n) { return n.toLocaleString("ru-RU"); }
     function calc() {
       var r = +rate.value, o = +occ.value / 100;
       var gross = Math.round(r * 365 * o), net = Math.round(gross * NETF);
-      rv.textContent = "$" + ru(r);
+      rv.textContent = "Rp " + ru(r);
       ov.textContent = occ.value + "%";
-      g.textContent = "$" + ru(gross);
-      nt.textContent = "$" + ru(net);
+      g.textContent = "Rp " + ru(gross);
+      nt.textContent = "Rp " + ru(net);
       yl.textContent = (net / PRICE * 100).toFixed(1).replace(".", ",") + "%";
       pay.textContent = (PRICE / net).toFixed(1).replace(".", ",") + " года";
     }
@@ -305,8 +320,7 @@
   })();
 
   /* ---- init ---- */
-  window.addEventListener("load", revealHero);
-  if (document.readyState === "complete") revealHero();
+  if (document.readyState === "complete") heroReady(); else window.addEventListener("load", heroReady);
   setProgress(); setNav();
 })();
 

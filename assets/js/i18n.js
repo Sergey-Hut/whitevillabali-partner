@@ -21,9 +21,9 @@
       id: "Halo! Saya tertarik dengan White Villa Bali"
     },
     income: {
-      ru: "Здравствуйте! Интересует доход и договоры по White Villa Bali",
-      en: "Hi! I'd like the rental income figures and the contracts for White Villa Bali",
-      id: "Halo! Saya ingin melihat angka pendapatan sewa dan kontrak White Villa Bali"
+      ru: "Здравствуйте! Хочу узнать подробнее о White Villa Bali",
+      en: "Hi! I'd like to learn more about White Villa Bali",
+      id: "Halo! Saya ingin tahu lebih banyak tentang White Villa Bali"
     },
     docs: {
       ru: "Здравствуйте! Прошу пакет документов по White Villa Bali",
@@ -37,9 +37,12 @@
     }
   };
   var POPUP = {
-    ru: { t: "Спасибо за заявку!", b: "Мы свяжемся с вами в ближайшее время.", c: "Закрыть" },
-    en: { t: "Thank you for your request!", b: "We'll get in touch with you shortly.", c: "Close" },
-    id: { t: "Terima kasih atas permintaan Anda!", b: "Kami akan segera menghubungi Anda.", c: "Tutup" }
+    ru: { t: "Спасибо за заявку!", b: "Мы свяжемся с вами в ближайшее время.", c: "Закрыть",
+      ft: "Не удалось отправить автоматически", fb: "Нажмите ниже, чтобы отправить заявку в WhatsApp.", fw: "Отправить в WhatsApp" },
+    en: { t: "Thank you for your request!", b: "We'll get in touch with you shortly.", c: "Close",
+      ft: "Couldn't send automatically", fb: "Tap below to send your request via WhatsApp.", fw: "Send via WhatsApp" },
+    id: { t: "Terima kasih atas permintaan Anda!", b: "Kami akan segera menghubungi Anda.", c: "Tutup",
+      ft: "Tidak terkirim otomatis", fb: "Ketuk di bawah untuk mengirim permintaan Anda lewat WhatsApp.", fw: "Kirim lewat WhatsApp" }
   };
   var LEAD_LABELS = {
     ru: { head: "Заявка с сайта White Villa Bali", name: "Имя", contact: "Контакт", msg: "Сообщение" },
@@ -58,12 +61,28 @@
     // hero
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
     "Вилла на Буките": "A villa on the Bukit", "с доходностью": "yielding", "12–15% годовых": "12–15% a year",
+    "Вилла 716 м² на Буките": "A 716 m² villa on the Bukit",
+    "Rp 15,3 млрд": "IDR 15.3 bn", "напрямую от собственника": "directly from the owner",
+    "Продаёт собственник · Унгасан · Бали": "For sale by owner · Ungasan · Bali",
+    "Вилла на Бали за Rp 15,3 млрд": "A Bali villa for IDR 15.3 bn",
+    "— задаток у нотариуса до конца сделки": "— your deposit stays with the notary until settlement",
+    "Задаток у нотариуса до конца сделки": "Your deposit stays with the notary until settlement",
+    "Дом 716 м² · участок 570 м² · 4 спальни · крыша 360° с видом на океан · бассейн · кинотеатр":
+      "716 m² home · 570 m² plot · 4 bedrooms · 360° rooftop with ocean views · pool · home cinema",
+    "Дом 716 м² на участке 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр.":
+      "A 716 m² home on a 570 m² plot: 4 bedrooms, a 360° rooftop with ocean views, a pool and a home cinema.",
+    "Документы к сделке готовы, оформление ведёт лицензированный нотариус (PPAT).":
+      "The transaction documents are ready, and the deal is handled by a licensed notary (PPAT).",
+    "Получить пакет от собственника": "Get the Owner's Info Pack",
+    "Унгасан, Бали. Участок 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Под ключ. Сделка через лицензированного нотариуса (PPAT).":
+      "Ungasan, Bali. 570 m² plot, 4 bedrooms, a 360° rooftop with ocean views, a pool and a home cinema. Turnkey. The deal is handled by a licensed notary (PPAT).",
+    "Получить полный пакет по вилле": "Get the full villa package",
     "4 спальни, панорамная крыша 360° с видом на океан и открытый бассейн. Под ключ — напрямую от собственника, без комиссии агента.":
       "4 bedrooms, a 360° panoramic rooftop with ocean views and an open-air pool. Turnkey — directly from the owner, no agent commission.",
     "Запросить частный показ": "Request a private viewing",
     // facts
     "Готова к жизни и аренде": "Ready to live in and rent out",
-    "Четыре уровня вокруг света и вида. Сдана в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
+    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
       "Four levels arranged around light and the view. Completed in 2018, handed over turnkey — furniture, appliances and a Sonos system already inside. Move in or rent from day one.",
     "дом": "house", "участок": "land", "спальни": "bedrooms", "санузлов": "bathrooms", "крыша": "rooftop", "год": "year",
     // video
@@ -85,8 +104,8 @@
       "Bedroom suites with walk-in closets and bathrooms. Warm stone, wood and soft light.",
     // gallery
     "Резиденция вблизи": "The residence up close",
-    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за $850 000.":
-      "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for $850,000.",
+    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
+      "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for IDR 15.3 bn.",
     // amenities
     "Оснащение": "Amenities", "Всё уже в доме": "Everything's already in the house",
     "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
@@ -184,7 +203,7 @@
     "Кто может купить — иностранец или гражданин Индонезии?": "Who can buy — a foreigner or an Indonesian citizen?",
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "We can structure it for any buyer. Indonesian citizens — SHM (full ownership). Foreigners — Hak Pakai as an individual or HGB via your company (PT PMA). The form and terms are confirmed by a licensed notary (PPAT).",
-    "Что входит в цену $850 000?": "What's included in the $850,000 price?",
+    "Что входит в цену Rp 15,3 млрд?": "What's included in the IDR 15.3 bn price?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
       "A turnkey villa: 4 bedrooms, 5+ bathrooms, pool, home cinema, 360° rooftop, a fitted kitchen, a Sonos system, furniture, a 2-car garage and staff quarters. Move in or rent — nothing left to buy.",
     "Какой доход и чем он подтверждён?": "What's the income and how is it backed?",
@@ -207,7 +226,7 @@
     "Сообщение": "Message", "(необязательно)": "(optional)", "Записаться на показ": "Book a viewing",
     "Ответим в течение часа. Без спама.": "We'll reply within an hour. No spam.",
     // footer
-    "Контакты": "Contacts", "Цена": "Price", "от $850 000": "from $850,000",
+    "Контакты": "Contacts", "Цена": "Price", "от Rp 15,3 млрд": "from IDR 15.3 bn",
     "Напрямую от собственника, без комиссии агента.": "Directly from the owner, no agent commission."
   };
 
@@ -216,11 +235,27 @@
     "Инвестиции": "Investasi", "Частный показ": "Viewing privat", "Резиденция": "Residence",
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
     "Вилла на Буките": "Vila di Bukit", "с доходностью": "dengan hasil", "12–15% годовых": "12–15% per tahun",
+    "Вилла 716 м² на Буките": "Vila 716 m² di Bukit",
+    "Rp 15,3 млрд": "Rp 15,3 miliar", "напрямую от собственника": "langsung dari pemilik",
+    "Продаёт собственник · Унгасан · Бали": "Dijual oleh pemilik · Ungasan · Bali",
+    "Вилла на Бали за Rp 15,3 млрд": "Vila di Bali seharga Rp 15,3 miliar",
+    "— задаток у нотариуса до конца сделки": "— uang muka aman di notaris sampai transaksi selesai",
+    "Задаток у нотариуса до конца сделки": "Uang muka aman di notaris sampai transaksi selesai",
+    "Дом 716 м² · участок 570 м² · 4 спальни · крыша 360° с видом на океан · бассейн · кинотеатр":
+      "Rumah 716 m² · lahan 570 m² · 4 kamar tidur · rooftop 360° dengan pemandangan laut · kolam renang · home cinema",
+    "Дом 716 м² на участке 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр.":
+      "Rumah 716 m² di atas lahan 570 m², 4 kamar tidur, rooftop 360° dengan pemandangan laut, kolam renang, dan home cinema.",
+    "Документы к сделке готовы, оформление ведёт лицензированный нотариус (PPAT).":
+      "Dokumen transaksi sudah siap, proses ditangani notaris berlisensi (PPAT).",
+    "Получить пакет от собственника": "Minta Info Lengkap dari Pemilik",
+    "Унгасан, Бали. Участок 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Под ключ. Сделка через лицензированного нотариуса (PPAT).":
+      "Ungasan, Bali. Lahan 570 m², 4 kamar tidur, rooftop 360° dengan pemandangan laut, kolam renang, dan home cinema. Siap huni. Transaksi melalui notaris berlisensi (PPAT).",
+    "Получить полный пакет по вилле": "Dapatkan paket lengkap vila",
     "4 спальни, панорамная крыша 360° с видом на океан и открытый бассейн. Под ключ — напрямую от собственника, без комиссии агента.":
       "4 kamar tidur, rooftop panorama 360° dengan pemandangan laut dan kolam renang terbuka. Siap huni — langsung dari pemilik, tanpa komisi agen.",
     "Запросить частный показ": "Minta viewing privat",
     "Готова к жизни и аренде": "Siap dihuni dan disewakan",
-    "Четыре уровня вокруг света и вида. Сдана в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
+    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
       "Empat tingkat yang tertata mengikuti cahaya dan pemandangan. Selesai 2018, diserahkan siap huni — furnitur, peralatan, dan sistem Sonos sudah di dalam. Tinggal masuk atau langsung disewakan.",
     "дом": "rumah", "участок": "tanah", "спальни": "kamar tidur", "санузлов": "kamar mandi", "крыша": "rooftop", "год": "tahun",
     "Видеотур": "Video tur", "Дом за одну минуту": "Rumah dalam satu menit",
@@ -239,8 +274,8 @@
     "Спальни-сьюты с гардеробными и ванными. Тёплый камень, дерево и мягкий свет.":
       "Suite kamar tidur dengan walk-in closet dan kamar mandi. Batu hangat, kayu, dan cahaya lembut.",
     "Резиденция вблизи": "Residence dari dekat",
-    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за $850 000.":
-      "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga $850.000.",
+    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
+      "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga Rp 15,3 miliar.",
     "Оснащение": "Fasilitas", "Всё уже в доме": "Semua sudah ada di rumah",
     "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
       "Dari home cinema sampai audio multiroom — vila lengkap dan siap huni. Tinggal masuk atau disewakan: tak perlu beli apa pun lagi.",
@@ -331,7 +366,7 @@
     "Кто может купить — иностранец или гражданин Индонезии?": "Siapa yang bisa membeli — asing atau WNI?",
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "Bisa untuk pembeli mana pun. WNI — SHM (kepemilikan penuh). Asing — Hak Pakai atas nama pribadi atau HGB via perusahaan Anda (PT PMA). Bentuk dan jangka waktunya dikonfirmasi notaris berlisensi (PPAT).",
-    "Что входит в цену $850 000?": "Apa yang termasuk dalam harga $850.000?",
+    "Что входит в цену Rp 15,3 млрд?": "Apa yang termasuk dalam harga Rp 15,3 miliar?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
       "Vila siap huni: 4 kamar tidur, 5+ kamar mandi, kolam, home cinema, rooftop 360°, dapur lengkap, sistem Sonos, furnitur, garasi 2 mobil, dan ruang staf. Tinggal masuk atau disewakan — tak perlu beli apa pun lagi.",
     "Какой доход и чем он подтверждён?": "Berapa pendapatannya dan apa buktinya?",
@@ -352,7 +387,7 @@
     "Имя": "Nama", "Связь с вами": "Kontak Anda", "(любой способ)": "(cara apa pun)",
     "Сообщение": "Pesan", "(необязательно)": "(opsional)", "Записаться на показ": "Pesan viewing",
     "Ответим в течение часа. Без спама.": "Kami balas dalam satu jam. Tanpa spam.",
-    "Контакты": "Kontak", "Цена": "Harga", "от $850 000": "mulai $850.000",
+    "Контакты": "Kontak", "Цена": "Harga", "от Rp 15,3 млрд": "mulai Rp 15,3 miliar",
     "Напрямую от собственника, без комиссии агента.": "Langsung dari pemilik, tanpa komisi agen."
   };
 
@@ -513,6 +548,7 @@
       '<span class="wv-pop__mono">W<span>V</span></span>' +
       '<div class="wv-pop__check" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>' +
       '<h3 class="wv-pop__t"></h3><p class="wv-pop__b"></p>' +
+      '<a class="btn btn--accent wv-pop__wa" style="display:none" target="_blank" rel="noopener"></a>' +
       '<button class="btn btn--accent wv-pop__c" type="button"></button>' +
       '</div>';
     document.body.appendChild(d);
@@ -521,11 +557,23 @@
     d.querySelector(".wv-pop__c").addEventListener("click", close);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
   }
-  function showPopup() {
+  function showPopup(waHref) {
+    // waHref set = relay failed: show a tappable WhatsApp link instead of the plain
+    // "thank you" (an auto window.open() here would be popup-blocked, it runs async in a .catch()).
     ensurePopup();
     var p = POPUP[CUR] || POPUP.ru, d = document.getElementById("wvPop");
-    d.querySelector(".wv-pop__t").textContent = p.t;
-    d.querySelector(".wv-pop__b").textContent = p.b;
+    var wa = d.querySelector(".wv-pop__wa");
+    if (waHref) {
+      d.querySelector(".wv-pop__t").textContent = p.ft;
+      d.querySelector(".wv-pop__b").textContent = p.fb;
+      wa.textContent = p.fw; wa.href = waHref;
+      wa.style.display = "";
+      wa.onclick = function () { track("generate_lead", "Lead"); };
+    } else {
+      d.querySelector(".wv-pop__t").textContent = p.t;
+      d.querySelector(".wv-pop__b").textContent = p.b;
+      wa.style.display = "none";
+    }
     d.querySelector(".wv-pop__c").textContent = p.c;
     d.classList.add("is-open"); d.setAttribute("aria-hidden", "false");
   }
@@ -556,13 +604,23 @@
       if (LEAD_ENDPOINT) {
         // secure relay → Telegram group (token hidden server-side)
         fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, contact: contact, msg: msg, lang: CUR, company: company, text: text }) }).catch(function () {});
+          body: JSON.stringify({ name: name, contact: contact, msg: msg, lang: CUR, company: company, text: text }) })
+          .then(function (r) {
+            if (!r.ok) throw new Error("relay " + r.status);
+            track("generate_lead", "Lead"); // analytics: only fires once the relay actually confirms
+            showPopup();
+          })
+          .catch(function () {
+            // relay failed — don't lose the lead: show a tappable WhatsApp link
+            showPopup("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text));
+          });
       } else {
         // fallback until relay deployed: open WhatsApp with the lead so it isn't lost
+        // (synchronous call inside the submit handler — not popup-blocked, unlike an async .catch())
         window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
+        track("generate_lead", "Lead");
+        showPopup();
       }
-      track("generate_lead", "Lead"); // analytics: form lead conversion (GA4 + Pixel + Metrica)
-      showPopup();
       form.reset();
     });
   }
@@ -595,6 +653,13 @@
     try { if (window.gtag) gtag("event", name); } catch (e) {}
     try { if (window.fbq) { fbStd ? fbq("track", fbStd) : fbq("trackCustom", name); } } catch (e) {}
     try { if (window.ym) ym(110156693, "reachGoal", name); } catch (e) {}
+    // OpenAI (ChatGPT Ads) pixel: form lead → standard lead_created, everything else → custom event under the same name.
+    try {
+      if (window.oaiq) {
+        if (name === "generate_lead") oaiq("measure", "lead_created", { type: "customer_action" });
+        else oaiq("measure", "custom", { type: "custom" }, { custom_event_name: name });
+      }
+    } catch (e) {}
   }
   function wireTracking() {
     // Form: first focus = user started a request (funnel step before the submit)
