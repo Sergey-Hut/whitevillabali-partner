@@ -20,7 +20,7 @@
       en: "Hi! I'm interested in White Villa Bali",
       id: "Halo! Saya tertarik dengan White Villa Bali"
     },
-    income: {
+    info: {
       ru: "Здравствуйте! Хочу узнать подробнее о White Villa Bali",
       en: "Hi! I'd like to learn more about White Villa Bali",
       id: "Halo! Saya ingin tahu lebih banyak tentang White Villa Bali"
@@ -57,10 +57,10 @@
   var EN = {
     // nav / common
     "Объект": "Property", "Галерея": "Gallery", "Планировки": "Floor plans",
+    "Вилла на Буките": "A villa on the Bukit",
     "Инвестиции": "Investment", "Частный показ": "Private viewing", "Резиденция": "Residence",
     // hero
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
-    "Вилла на Буките": "A villa on the Bukit", "с доходностью": "yielding", "12–15% годовых": "12–15% a year",
     "Вилла 716 м² на Буките": "A 716 m² villa on the Bukit",
     "Rp 15,3 млрд": "IDR 15.3 bn", "напрямую от собственника": "directly from the owner",
     "Продаёт собственник · Унгасан · Бали": "For sale by owner · Ungasan · Bali",
@@ -151,19 +151,6 @@
     "7 мин": "7 min", "8 мин": "8 min", "13 мин": "13 min", "15 мин": "15 min",
     "16 мин": "16 min", "17 мин": "17 min", "25 мин": "25 min", "30 мин": "30 min",
     "Время в пути — на авто, ориентировочно.": "Drive times, approximate.",
-    // invest
-    "Доход, подтверждённый договорами": "Income backed by contracts",
-    "Букит — самый востребованный юг Бали. Вилла под ключ и готова к аренде с первого дня; цифры подтверждают реальные договоры.":
-      "The Bukit is the most sought-after south of Bali. The villa is turnkey and rent-ready from day one; the figures are backed by real contracts.",
-    "доходность, чистыми": "net yield", "загрузка в год": "annual occupancy",
-    "лет окупаемость": "yrs payback", "цена входа": "entry price",
-    "Рассчитайте доход от аренды": "Estimate the rental income",
-    "Иллюстративно · при текущих допущениях": "Illustrative · at current assumptions",
-    "Ставка за ночь": "Nightly rate", "Загрузка": "Occupancy",
-    "валовой доход / год": "gross income / year", "чистыми / год ≈": "net / year ≈",
-    "доходность": "yield", "окупаемость": "payback",
-    "Расчёт после расходов и управления (≈45% от валового). Реальные договоры аренды и точные цифры — приватно на встрече.":
-      "Calculated after costs and management (≈45% of gross). Real rental contracts and exact figures — privately at the meeting.",
     "Запросить цифры и договоры": "Request figures & contracts",
     // ownership
     "Собственность и право": "Ownership & title",
@@ -171,11 +158,11 @@
     "Объект передаётся в одном из легальных форматов — в зависимости от того, гражданин вы Индонезии или иностранный покупатель. Структуру и сроки подтверждает лицензированный нотариус (PPAT) на сделке.":
       "The property is transferred in one of the legal formats — depending on whether you are an Indonesian citizen or a foreign buyer. The structure and terms are confirmed by a licensed notary (PPAT) at closing.",
     "Полная собственность": "Full ownership", "Граждане Индонезии": "Indonesian citizens",
-    "Фрихолд — право собственности без срока, высшая форма владения землёй и домом.":
-      "Freehold — ownership with no time limit, the highest form of holding land and a house.",
+    "Высшая форма владения землёй и домом по закону Индонезии.":
+      "The highest form of holding land and a house under Indonesian law.",
     "Право пользования": "Right to use", "Иностранцы · физлицо": "Foreigners · individual",
-    "Именное право пользования, продлеваемое по закону — суммарно до ~80 лет по действующим нормам.":
-      "A personal right to use, renewable by law — up to ~80 years in total under current rules.",
+    "Именное право пользования, продлеваемое по закону, — детали подтверждает нотариус (PPAT).":
+      "A personal right to use, renewable by law — details confirmed by a licensed notary (PPAT).",
     "Владение через компанию": "Ownership via a company", "Иностранцы · юрлицо": "Foreigners · company",
     "Оформление на вашу индонезийскую компанию (PT PMA) — частый формат для инвесторов.":
       "Held by your Indonesian company (PT PMA) — a common format for investors.",
@@ -183,8 +170,6 @@
       "We provide the full document package and title check at the private viewing. The exact format, terms and paperwork are set by a licensed notary (PPAT) — directly, no intermediaries.",
     // trust
     "Документы и доверие": "Documents & trust", "Чистая и прозрачная сделка": "A clean, transparent deal",
-    "Прямая продажа от собственника под сопровождением лицензированного нотариуса. Полный пакет документов и подтверждение дохода предоставляем приватно — по индивидуальному запросу.":
-      "A direct sale from the owner, supported by a licensed notary. The full document package and income proof are provided privately — on individual request.",
     "Запросить документы": "Request documents",
     "Напрямую от собственника": "Directly from the owner",
     "Без агентов и комиссий: договор и переговоры — напрямую с владельцем.":
@@ -192,9 +177,6 @@
     "Сопровождение нотариуса (PPAT)": "Notary support (PPAT)",
     "Лицензированный нотариус проверяет титул и регистрирует сделку по закону Индонезии.":
       "A licensed notary verifies the title and registers the deal under Indonesian law.",
-    "Доход подтверждён договорами": "Income backed by contracts",
-    "Реальные договоры аренды показываем приватно — с защитой персональных данных.":
-      "We show real rental contracts privately — with personal data protected.",
     "Документы — по запросу": "Documents on request",
     "Полный пакет предоставляем индивидуально: для вас и вашего юриста.":
       "We provide the full package individually: for you and your lawyer.",
@@ -206,9 +188,6 @@
     "Что входит в цену Rp 15,3 млрд?": "What's included in the IDR 15.3 bn price?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте и живите — докупать ничего не нужно.":
       "A turnkey villa: 4 bedrooms, 5+ bathrooms, pool, home cinema, 360° rooftop, a fitted kitchen, a Sonos system, furniture, a 2-car garage and staff quarters. Move in and live — nothing left to buy.",
-    "Какой доход и чем он подтверждён?": "What's the income and how is it backed?",
-    "Консервативно — 12–15% чистыми в год при загрузке около 70%. Доход подтверждают реальные договоры аренды; показываем их приватно на встрече, с защитой персональных данных.":
-      "Conservatively — 12–15% net per year at around 70% occupancy. The income is backed by real rental contracts; we show them privately at a meeting, with personal data protected.",
     "Есть ли комиссия агента?": "Is there an agent commission?",
     "Нет. Продажа напрямую от собственника — без агентских комиссий. Сделку сопровождает лицензированный нотариус.":
       "No. A direct sale from the owner — no agent commissions. A licensed notary supports the deal.",
@@ -232,9 +211,9 @@
 
   var ID = {
     "Объект": "Properti", "Галерея": "Galeri", "Планировки": "Denah",
+    "Вилла на Буките": "Vila di Bukit",
     "Инвестиции": "Investasi", "Частный показ": "Viewing privat", "Резиденция": "Residence",
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
-    "Вилла на Буките": "Vila di Bukit", "с доходностью": "dengan hasil", "12–15% годовых": "12–15% per tahun",
     "Вилла 716 м² на Буките": "Vila 716 m² di Bukit",
     "Rp 15,3 млрд": "Rp 15,3 miliar", "напрямую от собственника": "langsung dari pemilik",
     "Продаёт собственник · Унгасан · Бали": "Dijual oleh pemilik · Ungasan · Bali",
@@ -318,37 +297,23 @@
     "7 мин": "7 mnt", "8 мин": "8 mnt", "13 мин": "13 mnt", "15 мин": "15 mnt",
     "16 мин": "16 mnt", "17 мин": "17 mnt", "25 мин": "25 mnt", "30 мин": "30 mnt",
     "Время в пути — на авто, ориентировочно.": "Waktu tempuh dengan mobil, perkiraan.",
-    "Доход, подтверждённый договорами": "Pendapatan yang didukung kontrak",
-    "Букит — самый востребованный юг Бали. Вилла под ключ и готова к аренде с первого дня; цифры подтверждают реальные договоры.":
-      "Bukit adalah selatan Bali yang paling dicari. Vila siap huni dan siap disewakan sejak hari pertama; angkanya didukung kontrak nyata.",
-    "доходность, чистыми": "hasil bersih", "загрузка в год": "okupansi / tahun",
-    "лет окупаемость": "thn balik modal", "цена входа": "harga beli",
-    "Рассчитайте доход от аренды": "Hitung pendapatan sewa",
-    "Иллюстративно · при текущих допущениях": "Ilustratif · pada asumsi saat ini",
-    "Ставка за ночь": "Tarif per malam", "Загрузка": "Okupansi",
-    "валовой доход / год": "pendapatan kotor / tahun", "чистыми / год ≈": "bersih / tahun ≈",
-    "доходность": "hasil", "окупаемость": "balik modal",
-    "Расчёт после расходов и управления (≈45% от валового). Реальные договоры аренды и точные цифры — приватно на встрече.":
-      "Dihitung setelah biaya dan manajemen (≈45% dari kotor). Kontrak sewa nyata dan angka pasti — secara pribadi saat pertemuan.",
     "Запросить цифры и договоры": "Minta angka & kontrak",
     "Собственность и право": "Kepemilikan & hak",
     "Чистое право — оформление под любого покупателя": "Hak bersih — untuk setiap pembeli",
     "Объект передаётся в одном из легальных форматов — в зависимости от того, гражданин вы Индонезии или иностранный покупатель. Структуру и сроки подтверждает лицензированный нотариус (PPAT) на сделке.":
       "Properti dialihkan dalam salah satu format legal — tergantung apakah Anda warga negara Indonesia atau pembeli asing. Struktur dan jangka waktunya dikonfirmasi oleh notaris berlisensi (PPAT) saat transaksi.",
     "Полная собственность": "Kepemilikan penuh", "Граждане Индонезии": "Warga negara Indonesia",
-    "Фрихолд — право собственности без срока, высшая форма владения землёй и домом.":
-      "Freehold — kepemilikan tanpa batas waktu, bentuk kepemilikan tanah dan rumah tertinggi.",
+    "Высшая форма владения землёй и домом по закону Индонезии.":
+      "Bentuk kepemilikan tanah dan rumah tertinggi menurut hukum Indonesia.",
     "Право пользования": "Hak untuk memakai", "Иностранцы · физлицо": "Asing · perorangan",
-    "Именное право пользования, продлеваемое по закону — суммарно до ~80 лет по действующим нормам.":
-      "Hak pakai atas nama pribadi, dapat diperpanjang sesuai hukum — total hingga ~80 tahun menurut aturan saat ini.",
+    "Именное право пользования, продлеваемое по закону, — детали подтверждает нотариус (PPAT).":
+      "Hak pakai atas nama pribadi, dapat diperpanjang sesuai hukum — detailnya dikonfirmasi oleh notaris berlisensi (PPAT).",
     "Владение через компанию": "Kepemilikan via perusahaan", "Иностранцы · юрлицо": "Asing · badan usaha",
     "Оформление на вашу индонезийскую компанию (PT PMA) — частый формат для инвесторов.":
       "Atas nama perusahaan Indonesia Anda (PT PMA) — format umum bagi investor.",
     "Полный пакет документов и проверку титула предоставляем на частном показе. Точный формат, сроки и комплект бумаг фиксирует лицензированный нотариус (PPAT) — напрямую, без посредников.":
       "Paket dokumen lengkap dan pengecekan titel kami berikan saat viewing privat. Format pasti, jangka waktu, dan berkas ditetapkan oleh notaris berlisensi (PPAT) — langsung, tanpa perantara.",
     "Документы и доверие": "Dokumen & kepercayaan", "Чистая и прозрачная сделка": "Transaksi bersih & transparan",
-    "Прямая продажа от собственника под сопровождением лицензированного нотариуса. Полный пакет документов и подтверждение дохода предоставляем приватно — по индивидуальному запросу.":
-      "Penjualan langsung dari pemilik, didampingi notaris berlisensi. Paket dokumen lengkap dan bukti pendapatan diberikan secara pribadi — atas permintaan.",
     "Запросить документы": "Minta dokumen",
     "Напрямую от собственника": "Langsung dari pemilik",
     "Без агентов и комиссий: договор и переговоры — напрямую с владельцем.":
@@ -356,9 +321,6 @@
     "Сопровождение нотариуса (PPAT)": "Pendampingan notaris (PPAT)",
     "Лицензированный нотариус проверяет титул и регистрирует сделку по закону Индонезии.":
       "Notaris berlisensi memverifikasi titel dan mendaftarkan transaksi sesuai hukum Indonesia.",
-    "Доход подтверждён договорами": "Pendapatan didukung kontrak",
-    "Реальные договоры аренды показываем приватно — с защитой персональных данных.":
-      "Kami tunjukkan kontrak sewa nyata secara pribadi — dengan data pribadi dilindungi.",
     "Документы — по запросу": "Dokumen atas permintaan",
     "Полный пакет предоставляем индивидуально: для вас и вашего юриста.":
       "Paket lengkap kami berikan secara individual: untuk Anda dan pengacara Anda.",
@@ -369,9 +331,6 @@
     "Что входит в цену Rp 15,3 млрд?": "Apa yang termasuk dalam harga Rp 15,3 miliar?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте и живите — докупать ничего не нужно.":
       "Vila siap huni: 4 kamar tidur, 5+ kamar mandi, kolam, home cinema, rooftop 360°, dapur lengkap, sistem Sonos, furnitur, garasi 2 mobil, dan ruang staf. Tinggal masuk dan huni — tak perlu beli apa pun lagi.",
-    "Какой доход и чем он подтверждён?": "Berapa pendapatannya dan apa buktinya?",
-    "Консервативно — 12–15% чистыми в год при загрузке около 70%. Доход подтверждают реальные договоры аренды; показываем их приватно на встрече, с защитой персональных данных.":
-      "Secara konservatif — 12–15% bersih per tahun dengan okupansi sekitar 70%. Pendapatan didukung kontrak sewa nyata; kami tunjukkan secara pribadi saat pertemuan, dengan data pribadi dilindungi.",
     "Есть ли комиссия агента?": "Apakah ada komisi agen?",
     "Нет. Продажа напрямую от собственника — без агентских комиссий. Сделку сопровождает лицензированный нотариус.":
       "Tidak. Penjualan langsung dari pemilik — tanpa komisi agen. Transaksi didampingi notaris berlisensi.",
@@ -443,21 +402,6 @@
       if (tr != null) { var l = (n.nodeValue.match(/^\s*/) || [""])[0], r = (n.nodeValue.match(/\s*$/) || [""])[0]; n.nodeValue = l + tr + r; }
     }
   }
-  // calculator payback/yield are JS-set in RU ("7,4 года", "13,5%") — localize suffix + decimal
-  function fixCalc() {
-    if (CUR === "ru") return;
-    var pay = document.getElementById("invPay");
-    if (pay && /года|лет|год/.test(pay.textContent)) {
-      var t = pay.textContent.replace(/\s*(года|лет|год)\s*$/, CUR === "en" ? " yrs" : " thn");
-      if (CUR === "en") t = t.replace(",", ".");
-      pay.textContent = t;
-    }
-    if (CUR === "en") {
-      var yl = document.getElementById("invYield");
-      if (yl && yl.textContent.indexOf(",") > -1) yl.textContent = yl.textContent.replace(",", ".");
-    }
-  }
-
   function setPlaceholders(lang) {
     document.querySelectorAll("input[placeholder], textarea[placeholder]").forEach(function (el) {
       if (!el.dataset.phOrig) el.dataset.phOrig = el.getAttribute("placeholder");
@@ -469,7 +413,7 @@
   // classify a WhatsApp button by its ORIGINAL prefilled text so we keep its intent per language
   function waType(orig) {
     var t = (orig || "").toLowerCase();
-    if (/договор|доход|contract|income|figures|kontrak|pendapatan/.test(t)) return "income";
+    if (/договор|contract|kontrak/.test(t)) return "info";
     if (/документ|document|dokumen/.test(t)) return "docs";
     if (/показ|viewing|kunjungan|visit/.test(t)) return "viewing";
     return "greeting";
@@ -499,7 +443,6 @@
     if (!nodes) collect();
     for (var i = 0; i < nodes.length; i++) translateNode(nodes[i], lang);
     retranslateEl(document.getElementById("plnCap"));
-    fixCalc();
     setPlaceholders(lang);
     setWaLinks(lang);
     setLangButtons(lang);
@@ -529,12 +472,6 @@
     if (cap) {
       retranslateEl(cap);
       new MutationObserver(function () { retranslateEl(cap); }).observe(cap, { childList: true, subtree: true, characterData: true });
-    }
-    var pay = document.getElementById("invPay");
-    if (pay) {
-      fixCalc();
-      var box = pay.closest("section") || pay.parentNode;
-      new MutationObserver(fixCalc).observe(box, { childList: true, subtree: true, characterData: true });
     }
   }
 
